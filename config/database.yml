@@ -24,7 +24,7 @@ default: &default
 
 development:
   <<: *default
-  database: lightning_development
+  database: <%= File.basename(Dir.getwd) %>_development
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -32,10 +32,10 @@ development:
 
 test:
   <<: *default
-  database: lightning_test
+  database: <%= File.basename(Dir.getwd) %>_test
 
 production:
   <<: *default
-  database: lightning_production
+  database: <%= File.basename(Dir.getwd) %>_production
   username: lightning
   password: <%= ENV["LIGHTNING_DATABASE_PASSWORD"] %>
