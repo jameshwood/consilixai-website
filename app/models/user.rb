@@ -3,7 +3,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
   :recoverable, :rememberable, :validatable
-  pay_customer stripe_attibutes: :stripe_attibutes
+  pay_customer stripe_attributes: :stripe_attributes
 
 
   def stripe_attributes(pay_customer)
