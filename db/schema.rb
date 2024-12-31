@@ -14,61 +14,6 @@ ActiveRecord::Schema[8.0].define(version: 2024_12_09_034443) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
-  create_table "active_storage_attachments", force: :cascade do |t|
-    t.string "name", null: false
-    t.string "record_type", null: false
-    t.bigint "record_id", null: false
-    t.bigint "blob_id", null: false
-    t.datetime "created_at", null: false
-    t.index ["blob_id"], name: "index_active_storage_attachments_on_blob_id"
-    t.index ["record_type", "record_id", "name", "blob_id"], name: "index_active_storage_attachments_uniqueness", unique: true
-  end
-
-  create_table "active_storage_blobs", force: :cascade do |t|
-    t.string "key", null: false
-    t.string "filename", null: false
-    t.string "content_type"
-    t.text "metadata"
-    t.string "service_name", null: false
-    t.bigint "byte_size", null: false
-    t.string "checksum"
-    t.datetime "created_at", null: false
-    t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
-  end
-
-  create_table "active_storage_variant_records", force: :cascade do |t|
-    t.bigint "blob_id", null: false
-    t.string "variation_digest", null: false
-    t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
-  end
-
-  create_table "gardens", force: :cascade do |t|
-    t.bigint "user_id", null: false
-    t.string "year"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "score", default: 0
-    t.integer "stars", default: 0
-    t.index ["user_id"], name: "index_gardens_on_user_id"
-  end
-
-  create_table "github_followers", force: :cascade do |t|
-    t.bigint "user_id", null: false
-    t.string "github_username"
-    t.string "avatar_url"
-    t.float "position_x"
-    t.float "position_y"
-    t.float "position_z"
-    t.float "rotation_y"
-    t.string "state"
-    t.integer "github_id"
-    t.bigint "garden_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["garden_id"], name: "index_github_followers_on_garden_id"
-    t.index ["user_id"], name: "index_github_followers_on_user_id"
-  end
-
   create_table "motor_alert_locks", force: :cascade do |t|
     t.bigint "alert_id", null: false
     t.string "lock_timestamp", null: false
@@ -353,46 +298,6 @@ ActiveRecord::Schema[8.0].define(version: 2024_12_09_034443) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "stocks", force: :cascade do |t|
-    t.bigint "widget_id", null: false
-    t.string "tickr"
-    t.float "amount"
-    t.float "purchase_price"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["widget_id"], name: "index_stocks_on_widget_id"
-  end
-
-  create_table "tasks", force: :cascade do |t|
-    t.string "title"
-    t.boolean "done"
-    t.bigint "widget_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.boolean "monday"
-    t.boolean "tuesday"
-    t.boolean "wednesday"
-    t.boolean "thursday"
-    t.boolean "friday"
-    t.boolean "saturday"
-    t.boolean "sunday"
-    t.index ["widget_id"], name: "index_tasks_on_widget_id"
-  end
-
-  create_table "trees", force: :cascade do |t|
-    t.bigint "garden_id", null: false
-    t.string "image"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.float "position_z", null: false
-    t.float "position_y", null: false
-    t.float "position_x", null: false
-    t.float "rotation_y", default: 0.0
-    t.float "scale", default: 1.0
-    t.integer "tree_type", null: false
-    t.index ["garden_id"], name: "index_trees_on_garden_id"
-  end
-
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -402,35 +307,10 @@ ActiveRecord::Schema[8.0].define(version: 2024_12_09_034443) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "admin"
-    t.string "first_name"
-    t.string "last_name"
-    t.string "github_username"
-    t.string "name"
-    t.string "github_token"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  create_table "widgets", force: :cascade do |t|
-    t.bigint "user_id", null: false
-    t.string "category"
-    t.integer "position_x"
-    t.integer "position_y"
-    t.integer "width"
-    t.integer "height"
-    t.float "goal"
-    t.float "progress"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "timezone", default: "Paris"
-    t.index ["user_id"], name: "index_widgets_on_user_id"
-  end
-
-  add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "gardens", "users"
-  add_foreign_key "github_followers", "gardens"
-  add_foreign_key "github_followers", "users"
   add_foreign_key "motor_alert_locks", "motor_alerts", column: "alert_id"
   add_foreign_key "motor_alerts", "motor_queries", column: "query_id"
   add_foreign_key "motor_note_tag_tags", "motor_note_tags", column: "tag_id"
@@ -440,8 +320,4 @@ ActiveRecord::Schema[8.0].define(version: 2024_12_09_034443) do
   add_foreign_key "pay_charges", "pay_subscriptions", column: "subscription_id"
   add_foreign_key "pay_payment_methods", "pay_customers", column: "customer_id"
   add_foreign_key "pay_subscriptions", "pay_customers", column: "customer_id"
-  add_foreign_key "stocks", "widgets"
-  add_foreign_key "tasks", "widgets"
-  add_foreign_key "trees", "gardens"
-  add_foreign_key "widgets", "users"
 end
