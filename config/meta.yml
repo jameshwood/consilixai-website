@@ -3,3 +3,4 @@ meta_title: "LightningRails - The fastest way to kickstart your Rails app"
 meta_description: "LightningRails is a Rails template that helps you kickstart your Rails app in minutes. It comes with a set of pre-configured tools and best practices to help you build your app faster."
 meta_image: "cover.png" # should exist in `app/assets/images/`
 twitter_account: "@your_twitter_account" # required for Twitter Cards
+setup_date: "2025-01-23"

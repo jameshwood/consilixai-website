@@ -35,6 +35,7 @@ twitter_account: "@product_twitter_account"
 company_name: "$company_name"
 company_website: "$company_website"
 company_twitter: "$company_twitter"
+setup_date: "$(date)"
 EOL
 
 echo "🎉 meta.yml has been updated with your company information. You should have basic information in the legal pages and meta SEO data. But don't hesitate to edit it."
@@ -55,4 +56,13 @@ rm -rf config/credentials.yml.enc
 echo "Creating the .env file..."
 cp env.sample .env
 
-echo "Setup complete! Your LightningRails project is ready to go 🚀."
+# Stage all changes
+git add .
+
+# Create the initial commit
+git commit -m "Initial commit: Set up company information in meta.yml"
+
+# Push the changes to the remote repository
+git push -u origin master
+
+echo "Setup complete! Your LightningRails project is ready to go 🚀. Happy Building!"
