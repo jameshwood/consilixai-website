@@ -2,18 +2,7 @@
   <div class="navbar-start">
     <div class="lg:hidden dropdown">
       <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-5 w-5"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor">
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M4 6h16M4 12h8m-8 6h16" />
-        </svg>
+        <%= lucide_icon("menu", class: "w-5 h-5") %>
       </div>
       <ul
         tabindex="0"
@@ -27,7 +16,7 @@
       </ul>
     </div>
     <%= link_to root_path, class: "btn btn-ghost text-xl" do %>
-      <%= image_tag "logo.png", alt: "Logo", class: "h-8" %>
+      <%= image_tag "logo.png", alt: "Logo", class: "h-8 rounded-sm" %>
       LightningRails
     <% end %>
   </div>
@@ -42,6 +31,11 @@
     </ul>
   </div>
   <div class="navbar-end">
+    <label class="hidden lg:flex cursor-pointer gap-2 mr-4">
+      <%= lucide_icon("moon", class: "w-5 h-5") %>
+      <input type="checkbox" value="synthwave" class="toggle theme-controller" />
+      <%= lucide_icon("sun", class: "w-5 h-5") %>
+    </label>
     <% if user_signed_in? %>
       <%= link_to "Dashboard", "#", class: "btn btn-primary" %>
     <% else %>
