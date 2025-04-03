@@ -220,7 +220,7 @@ GEM
     paddle (2.7.0)
       faraday (~> 2.11.0)
       ostruct (~> 0.6.0)
-    pay (8.2.1)
+    pay (7.3.0)
       rails (>= 6.0.0)
     pdf-core (0.10.0)
     pg (1.5.9)
@@ -315,7 +315,7 @@ GEM
     stimulus-rails (1.3.4)
       railties (>= 6.0.0)
     stringio (3.1.2)
-    stripe (13.2.0)
+    stripe (12.6.0)
     tailwindcss-rails (3.0.0)
       railties (>= 7.0.0)
       tailwindcss-ruby
@@ -361,7 +361,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap
-  braintree
+  braintree (~> 4.7)
   capybara
   cloudinary
   debug
@@ -369,24 +369,24 @@ DEPENDENCIES
   dotenv-rails
   importmap-rails
   jbuilder
-  lemonsqueezy
+  lemonsqueezy (~> 1.0)
   letter_opener
   lucide-rails
   motor-admin
   mutex_m
   ostruct
-  paddle
-  pay
+  paddle (~> 2.5)
+  pay (~> 7.0)
   pg
   postmark-rails
   puma
   rails (~> 8.0.0)
-  receipts
+  receipts (~> 2.0)
   redis
   selenium-webdriver
   sprockets-rails
   stimulus-rails
-  stripe
+  stripe (~> 12.0)
   tailwindcss-rails
   turbo-rails
   tzinfo-data
