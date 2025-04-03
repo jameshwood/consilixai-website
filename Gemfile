@@ -55,22 +55,22 @@ gem "cloudinary"
 gem "postmark-rails"
 
 # payment processing
-gem "pay"
+gem "pay", "~> 7.0"
 
 # To use Stripe, also include:
-gem "stripe"
+gem "stripe", "~> 12.0"
 
 # To use Braintree + PayPal, also include:
-gem "braintree"
+gem "braintree", "~> 4.7"
 
 # To use Paddle Billing or Paddle Classic, also include:
-gem "paddle"
+gem "paddle", "~> 2.5"
 
 # To use Lemon Squeezy, also include:
-gem "lemonsqueezy"
+gem "lemonsqueezy", "~> 1.0"
 
 # To use Receipts gem for creating invoice and receipt PDFs, also include:
-gem "receipts"
+gem "receipts", "~> 2.0"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
