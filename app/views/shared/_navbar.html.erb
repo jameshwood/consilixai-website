@@ -33,7 +33,7 @@
   <div class="navbar-end">
     <label class="hidden lg:flex cursor-pointer gap-2 mr-4">
       <%= lucide_icon("moon", class: "w-5 h-5") %>
-      <input type="checkbox" value="synthwave" class="toggle theme-controller" />
+      <input type="checkbox" value="<%= DEFAULT_META["DARK_THEME"] %>" class="toggle theme-controller" data-controller="theme" data-action="change->theme#toggle" data-theme-target="toggle" />
       <%= lucide_icon("sun", class: "w-5 h-5") %>
     </label>
     <% if user_signed_in? %>
