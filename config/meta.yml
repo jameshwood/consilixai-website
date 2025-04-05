@@ -4,3 +4,8 @@ meta_description: "LightningRails is a Rails template that helps you kickstart y
 meta_image: "cover.png" # should exist in `app/assets/images/`
 twitter_account: "@your_twitter_account" # required for Twitter Cards
 setup_date: "2025-01-23"
+
+
+# Theme
+LIGHT_THEME: "cupcake"
+DARK_THEME: "forest"
