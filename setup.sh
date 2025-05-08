@@ -36,6 +36,10 @@ company_name: "$company_name"
 company_website: "$company_website"
 company_twitter: "$company_twitter"
 setup_date: "$(date)"
+
+# Theme
+LIGHT_THEME: "light"
+DARK_THEME: "dark"
 EOL
 
 echo "🎉 meta.yml has been updated with your company information. You should have basic information in the legal pages and meta SEO data. But don't hesitate to edit it."
