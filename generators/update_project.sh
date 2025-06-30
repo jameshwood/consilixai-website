@@ -62,41 +62,44 @@ read -p "Choose option (1-3): " choice
 case $choice in
   1)
     echo "⚠️  Attempting selective merge..."
-    echo "📝 Excluding frontend views, database files, and custom configurations..."
+    echo "📝 This will merge all changes, then reset excluded files to preserve your customizations..."
     
-    # Create exclude pathspec for git merge
-    PATHSPEC_EXCLUDE=""
+    # First, do a regular merge (this may create conflicts)
+    if git merge upstream/master --no-ff --no-commit; then
+      echo "✅ Merge completed without conflicts"
+    else
+      echo "⚠️  Merge has conflicts - continuing with selective reset..."
+    fi
+    
+    # Reset excluded files back to their original state
+    echo "🔄 Resetting excluded files to preserve your customizations..."
     for path in "${EXCLUDED_PATHS[@]}"; do
-      PATHSPEC_EXCLUDE="$PATHSPEC_EXCLUDE :(exclude)$path"
+      if [ -e "$path" ] || git ls-files --error-unmatch "$path" >/dev/null 2>&1; then
+        echo "   Preserving: $path"
+        git reset HEAD "$path" 2>/dev/null || true
+        git checkout HEAD -- "$path" 2>/dev/null || true
+      fi
     done
-    
-    # Merge only specific paths that are safe to update
-    git merge upstream/master --no-ff --no-commit -- \
-      lib/ \
-      config/initializers/ \
-      app/helpers/ \
-      generators/ \
-      bin/ \
-      config/locales/ \
-      spec/ \
-      test/ \
-      .github/ \
-      .gitignore \
-      || echo "⚠️  Some conflicts may need manual resolution"
     
     echo ""
     echo "✅ Selective merge complete!"
-    echo "📋 Files that were updated:"
+    echo "📋 Files staged for commit:"
     git diff --cached --name-only
     echo ""
-    echo "🔍 Review changes and run: git commit -m 'Update: Merge safe LightningRails improvements'"
-    echo "⚠️  Note: Frontend views, database files, and custom configs were preserved"
+    echo "📋 Files with conflicts (if any):"
+    git diff --name-only --diff-filter=U
+    echo ""
+    echo "🔍 Next steps:"
+    echo "   1. Review staged changes: git diff --cached"
+    echo "   2. Resolve any remaining conflicts manually"
+    echo "   3. Run: git commit -m 'Update: Merge safe LightningRails improvements'"
+    echo "⚠️  Note: Your views, database files, and custom configs were preserved"
     ;;
   2)
-    echo "📋 Files that would be updated:"
-    git diff --name-only master upstream/master | grep -E '^(lib/|config/initializers/|app/helpers/|generators/|bin/|config/locales/|spec/|test/|\.github/|\.gitignore)' || echo "No safe files to update found"
+    echo "📋 Files that would be updated (all changes):"
+    git diff --name-only master upstream/master
     echo ""
-    echo "🚫 Files that will be excluded:"
+    echo "🚫 Files that will be reset/excluded after merge:"
     for path in "${EXCLUDED_PATHS[@]}"; do
       echo "   - $path"
     done
@@ -110,5 +113,6 @@ esac
 git remote remove upstream
 
 echo "✅ Update process complete!"
+
 
 
