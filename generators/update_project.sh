@@ -6,7 +6,7 @@ echo "⚡ Updating your LightningRails project..."
 # Step 1: Create backup branch
 echo "💾 Creating backup of current state..."
 git checkout -b backup-before-update-$(date +%Y%m%d-%H%M%S)
-git checkout main
+git checkout master
 
 # Step 2: Re-add upstream temporarily  
 echo "🔗 Adding LightningRails upstream..."
@@ -15,7 +15,7 @@ git fetch upstream
 
 # Step 3: Show available updates
 echo "📋 Available updates from LightningRails:"
-git log main..upstream/main --oneline --graph
+git log master..upstream/master --oneline --graph
 
 # Step 4: Interactive update selection
 echo "🎯 Select updates to apply:"
@@ -29,12 +29,12 @@ read -p "Choose option (1-4): " choice
 case $choice in
   1)
     echo "⚠️  Attempting to merge all updates..."
-    git merge upstream/main --no-ff --no-commit
+    git merge upstream/master --no-ff --no-commit
     echo "Review changes and run: git commit -m 'Update: Merge latest LightningRails improvements'"
     ;;
   2)
     echo "🍒 Cherry-pick mode - Select commits:"
-    git log upstream/main --oneline | head -20
+    git log upstream/master --oneline | head -20
     read -p "Enter commit hashes separated by spaces: " commits
     for commit in $commits; do
       git cherry-pick $commit
@@ -42,7 +42,7 @@ case $choice in
     ;;
   3)
     echo "📊 Generating comparison report..."
-    git diff main upstream/main > lightning_rails_updates.diff
+    git diff master upstream/master > lightning_rails_updates.diff
     echo "Review lightning_rails_updates.diff file"
     ;;
   4)
