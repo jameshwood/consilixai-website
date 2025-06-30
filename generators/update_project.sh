@@ -13,18 +13,24 @@ echo "🔗 Adding LightningRails upstream..."
 git remote add upstream https://github.com/Danrod16/lightning-rails.git
 git fetch upstream
 
-# Step 3: Show available updates
-echo "📋 Available updates from LightningRails:"
-git log master..upstream/master --oneline --graph
+# Step 3: Show update summary
+echo "📋 Update Summary:"
+echo "=================="
 
-# Step 4: Interactive update selection
-echo "🎯 Select updates to apply:"
-echo "1) Apply all updates (risky - may conflict)"
-echo "2) Select specific commits to cherry-pick" 
-echo "3) Show file-by-file diff for manual review"
-echo "4) Cancel update"
+# Get commit count and date range
+COMMIT_COUNT=$(git rev-list --count master..upstream/master)
+LATEST_DATE=$(git log upstream/master -1 --format="%cr")
 
-read -p "Choose option (1-4): " choice
+echo "📊 Total updates available: $COMMIT_COUNT commits"
+echo "🗓️  Latest update: $LATEST_DATE"
+echo ""
+
+# Step 4: Simple update selection
+echo "🎯 Update Options:"
+echo "1) Apply all updates"
+echo "2) Cancel update"
+
+read -p "Choose option (1-2): " choice
 
 case $choice in
   1)
@@ -33,19 +39,6 @@ case $choice in
     echo "Review changes and run: git commit -m 'Update: Merge latest LightningRails improvements'"
     ;;
   2)
-    echo "🍒 Cherry-pick mode - Select commits:"
-    git log upstream/master --oneline | head -20
-    read -p "Enter commit hashes separated by spaces: " commits
-    for commit in $commits; do
-      git cherry-pick $commit
-    done
-    ;;
-  3)
-    echo "📊 Generating comparison report..."
-    git diff master upstream/master > lightning_rails_updates.diff
-    echo "Review lightning_rails_updates.diff file"
-    ;;
-  4)
     echo "❌ Update cancelled"
     ;;
 esac
@@ -54,3 +47,4 @@ esac
 git remote remove upstream
 
 echo "✅ Update process complete!"
+
