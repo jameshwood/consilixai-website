@@ -7,5 +7,5 @@ setup_date: "2025-01-23"
 
 
 # Theme
-LIGHT_THEME: "lightning-theme"
+LIGHT_THEME: "light"
 DARK_THEME: "dark"
