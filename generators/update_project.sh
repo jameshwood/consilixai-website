@@ -32,6 +32,7 @@ git fetch "${REMOTE_NAME}"
 echo ""
 echo "📋 Update Summary:"
 echo "=================="
+
 COMMIT_COUNT=$(git rev-list --count "${DEFAULT_BRANCH}".."${REMOTE_NAME}/${DEFAULT_BRANCH}")
 if [ "$COMMIT_COUNT" -gt 0 ]; then
     LATEST_DATE=$(git log "${REMOTE_NAME}/${DEFAULT_BRANCH}" -1 --format="%cr")
@@ -57,4 +58,6 @@ if [ "$COMMIT_COUNT" -gt 0 ]; then
 else
     echo "✅ Your project is already up to date!"
 fi
+
+
 
