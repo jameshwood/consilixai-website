@@ -1,45 +1,25 @@
-<div class="navbar bg-base-100">
-  <div class="navbar-start">
-    <div class="lg:hidden dropdown">
-      <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
-        <%= lucide_icon("menu", class: "w-5 h-5") %>
-      </div>
-      <ul
-        tabindex="0"
-        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-        <% if user_signed_in? %>
-          <li><%= button_to "Logout", destroy_user_session_path, method: :delete %></li>
-        <% else %>
-          <li><%= link_to "Log in", new_user_session_path %></li>
-          <li><%= link_to "Sign up", new_user_registration_path %></li>
-        <% end %>
-      </ul>
+<div class="navbar">
+  <div class="navbar-container">
+    <!-- Logo -->
+    <%= link_to "Consilix.ai", root_path, class: "navbar-logo" %>
+    
+    <!-- Navigation -->
+    <div class="navbar-nav">
+      <%= link_to "Home", root_path, class: "navbar-link #{current_page?(root_path) ? 'active' : ''}" %>
+      <%= link_to "Services", services_path, class: "navbar-link #{current_page?(services_path) ? 'active' : ''}" %>
+      <%= link_to "About", about_path, class: "navbar-link #{current_page?(about_path) ? 'active' : ''}" %>
+      <%= link_to "Case Studies", case_studies_path, class: "navbar-link #{current_page?(case_studies_path) ? 'active' : ''}" %>
+      <%= link_to "Contact", contact_path, class: "navbar-link #{current_page?(contact_path) ? 'active' : ''}" %>
     </div>
-    <%= link_to root_path, class: "btn btn-ghost text-xl" do %>
-      <%= image_tag "logo.png", alt: "Logo", class: "h-8 rounded-sm" %>
-      LightningRails
-    <% end %>
-  </div>
-  <div class="navbar-center hidden lg:flex">
-    <ul class="menu menu-horizontal px-1">
-      <li><%= link_to "Documentation", "#" %></li>
-      <% if user_signed_in? %>
-        <li><%= button_to "Logout", destroy_user_session_path, method: :delete %></li>
-      <% else %>
-        <li><%= link_to "Log in", new_user_session_path %></li>
-      <% end %>
-    </ul>
-  </div>
-  <div class="navbar-end">
-    <label class="hidden lg:flex cursor-pointer gap-2 mr-4">
-      <%= lucide_icon("moon", class: "w-5 h-5") %>
-      <input type="checkbox" value="<%= DEFAULT_META["DARK_THEME"] %>" class="toggle theme-controller" data-controller="theme" data-action="change->theme#toggle" data-theme-target="toggle" />
-      <%= lucide_icon("sun", class: "w-5 h-5") %>
-    </label>
-    <% if user_signed_in? %>
-      <%= link_to "Dashboard", "#", class: "btn btn-primary" %>
-    <% else %>
-      <%= link_to "Get started", new_user_registration_path, class: "btn btn-primary" %>
-    <% end %>
+    
+    <!-- CTA Button -->
+    <%= link_to "Book a Call", "#contact", class: "navbar-cta" %>
+    
+    <!-- Mobile menu button -->
+    <button class="navbar-mobile-btn">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
   </div>
 </div>

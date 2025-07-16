@@ -1,31 +1,64 @@
-<footer class="footer bg-base-200 text-base-content p-10 justify-between flex">
-  <aside>
-    <%= image_tag 'logo.png', alt: 'Logo', class: 'fill-current h-8 rounded-sm' %>
-    <p>
-      ACME Industries Ltd.
-      <br />
-      Providing reliable tech since 1992
-    </p>
-    <%= link_to "🚀 Powered by LightningRails", "https://lightningrails.com", class: 'btn btn-neutral' %>
-  </aside>
-  <nav>
-    <h6 class="footer-title">Services</h6>
-    <%= link_to 'Branding', '#', class: 'link link-hover' %>
-    <%= link_to 'Design', '#', class: 'link link-hover' %>
-    <%= link_to 'Marketing', '#', class: 'link link-hover' %>
-    <%= link_to 'Advertisement', '#', class: 'link link-hover' %>
-  </nav>
-  <nav>
-    <h6 class="footer-title">Company</h6>
-    <%= link_to 'About us', '#', class: 'link link-hover' %>
-    <%= link_to 'Contact', '#', class: 'link link-hover' %>
-    <%= link_to 'Jobs', '#', class: 'link link-hover' %>
-    <%= link_to 'Press kit', '#', class: 'link link-hover' %>
-  </nav>
-  <nav>
-    <h6 class="footer-title">Legal</h6>
-    <%= link_to 'Terms of use',  terms_and_conditions_path, class: 'link link-hover' %>
-    <%= link_to 'Privacy policy', privacy_policy_path, class: 'link link-hover' %>
-    <%= link_to 'Cookie policy', cookies_path, class: 'link link-hover' %>
-  </nav>
+<footer class="w-full" style="min-height: 362px; padding: 65px 0 64px 0; border-top: 1px solid rgba(141, 141, 159, 0.20); background: linear-gradient(90deg, #0D0C1E 0%, rgba(141, 141, 159, 0.10) 100%);">
+  <div class="flex justify-center items-center" style="max-width: 1440px; margin: 0 auto; padding: 0 144px;">
+    <div class="relative" style="width: 1152px; height: 233px;">
+    <!-- Main content -->
+    <div class="absolute" style="width: 1104px; height: 128px; left: 24px; top: 0px;">
+      <!-- Consilix.ai section -->
+      <div class="absolute" style="width: 252px; height: 128px; left: 0px; top: 0px;">
+        <div class="absolute" style="width: 252px; height: 32px; left: 0px; top: 0px;">
+          <div class="absolute" style="width: 123px; height: 32px; left: 0px; top: -1.88px; color: #33EC87; font-size: 24px; font-family: Inter; font-weight: 700; word-wrap: break-word;">Consilix.ai</div>
+        </div>
+        <div class="absolute" style="width: 227px; height: 48px; left: 0px; top: 48.24px; color: #8D8D9F; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 24px; word-wrap: break-word;">Where AI strategy meets real- world execution.</div>
+      </div>
+      
+      <!-- Services section -->
+      <div class="absolute" style="width: 252px; height: 128px; left: 284px; top: 0px;">
+        <div class="absolute" style="width: 150px; height: 24px; left: 0px; top: 0px; color: #F1F1F1; font-size: 16px; font-family: Inter; font-weight: 600; line-height: 24px; white-space: nowrap;">Services</div>
+        <div class="absolute" style="width: 252px; height: 96px; left: 0px; top: 32px;">
+          <div class="absolute" style="width: 252px; height: 24px; left: 0px; top: 0px;">
+            <%= link_to "AI Workflows", "#", class: "absolute", style: "width: 200px; height: 24px; left: 0px; top: 0px; color: #8D8D9F; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 24px; white-space: nowrap; text-decoration: none;" %>
+          </div>
+          <div class="absolute" style="width: 252px; height: 24px; left: 0px; top: 32px;">
+            <%= link_to "Automation Systems", "#", class: "absolute", style: "width: 200px; height: 24px; left: 0px; top: 0px; color: #8D8D9F; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 24px; white-space: nowrap; text-decoration: none;" %>
+          </div>
+          <div class="absolute" style="width: 252px; height: 24px; left: 0px; top: 64px;">
+            <%= link_to "Agent Development", "#", class: "absolute", style: "width: 200px; height: 24px; left: 0px; top: 0px; color: #8D8D9F; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 24px; white-space: nowrap; text-decoration: none;" %>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Company section -->
+      <div class="absolute" style="width: 252px; height: 128px; left: 568px; top: 0px;">
+        <div class="absolute" style="width: 150px; height: 24px; left: 0px; top: 0px; color: #F1F1F1; font-size: 16px; font-family: Inter; font-weight: 600; line-height: 24px; white-space: nowrap;">Company</div>
+        <div class="absolute" style="width: 252px; height: 96px; left: 0px; top: 32px;">
+          <div class="absolute" style="width: 252px; height: 24px; left: 0px; top: 0px;">
+            <%= link_to "About Us", "#about", class: "absolute", style: "width: 71px; height: 24px; left: 0px; top: 0px; color: #8D8D9F; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 24px; word-wrap: break-word; text-decoration: none;" %>
+          </div>
+          <div class="absolute" style="width: 252px; height: 24px; left: 0px; top: 32px;">
+            <%= link_to "Case Studies", "#case-studies", class: "absolute", style: "width: 100px; height: 24px; left: 0px; top: 0px; color: #8D8D9F; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 24px; word-wrap: break-word; text-decoration: none;" %>
+          </div>
+          <div class="absolute" style="width: 252px; height: 24px; left: 0px; top: 64px;">
+            <%= link_to "Contact", "#contact", class: "absolute", style: "width: 61px; height: 24px; left: 0px; top: 0px; color: #8D8D9F; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 24px; word-wrap: break-word; text-decoration: none;" %>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Connect section -->
+      <div class="absolute" style="width: 252px; height: 128px; left: 852px; top: 0px;">
+        <div class="absolute" style="width: 66px; height: 24px; left: 0px; top: 0px; color: #F1F1F1; font-size: 16px; font-family: Inter; font-weight: 600; line-height: 24px; word-wrap: break-word;">Connect</div>
+        <div class="absolute" style="width: 252px; height: 28px; left: 0px; top: 32px;">
+          <!-- Social icons placeholders -->
+          <div class="absolute" style="width: 17.50px; height: 20px; left: 0px; top: 4px; background: #8D8D9F;"></div>
+          <div class="absolute" style="width: 20px; height: 20px; left: 33.50px; top: 4px; background: #8D8D9F;"></div>
+          <div class="absolute" style="width: 19.38px; height: 20px; left: 69.50px; top: 4px; background: #8D8D9F;"></div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Bottom border and copyright -->
+    <div class="absolute" style="width: 1104px; height: 57px; left: 24px; top: 176px; border-top: 1px rgba(141, 141, 159, 0.20) solid;">
+      <div class="absolute text-center" style="width: 290px; height: 24px; left: 406.19px; top: 31.88px; color: #8D8D9F; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 24px; word-wrap: break-word;">© 2024 Consilix.ai. All rights reserved.</div>
+    </div>
+    </div>
+  </div>
 </footer>

@@ -26,6 +26,9 @@
 
     <%# Change your favicon in assets/images/favicon.png  %>
     <%= favicon_link_tag 'favicon.ico' %>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <%= stylesheet_link_tag "tailwind", "data-turbo-track": "reload" %>
     
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
@@ -33,14 +36,15 @@
     <script src="https://js.stripe.com/v3/"></script>
   </head>
 
-  <body>
+  <body class="text-white" style="background: #0D0C1E; font-family: 'Inter', sans-serif;">
     <div class="grid min-h-screen grid-rows-[auto_1fr_auto]">
       <%= render "shared/navbar" %>
-      <main class="container mx-auto mt-8">
+      <main>
         <%= render "shared/alerts" %>
         <%= yield %>
       </main>
       <%= render "shared/footer" %>
     </div>
+    
   </body>
 </html>
