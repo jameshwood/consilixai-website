@@ -4,7 +4,7 @@
 .hero-section {
   position: relative;
   padding: 80px 24px;
-  background: linear-gradient(90deg, rgba(0, 255, 178, 0.15) 0%, rgba(25, 255, 130, 0.15) 100%);
+  background: linear-gradient(90deg, rgba(215, 56, 4, 0.15) 0%, rgba(255, 87, 34, 0.15) 100%);
   text-align: center;
   overflow: hidden;
 }
@@ -28,7 +28,7 @@
 .hero-section::after {
   content: '';
   position: absolute;
-  background: rgba(0, 255, 178, 0.2);
+  background: rgba(215, 56, 4, 0.2);
   border-radius: 50%;
   filter: blur(40px);
 }
@@ -50,7 +50,7 @@
 /* CTA Section */
 .cta-section {
   background: linear-gradient(135deg, #0B4A3A 0%, #1A5F4F 100%);
-  border: 1px solid rgba(51, 236, 135, 0.2);
+  border: 1px solid rgba(215, 56, 4, 0.2);
   border-radius: 16px;
   padding: 60px 40px;
   text-align: center;
@@ -73,7 +73,7 @@
 
 /* Buttons */
 .btn-primary {
-  background: #33EC87;
+  background: #EB7300;
   color: #0D0C1E;
   font-family: Inter;
   font-weight: 600;
@@ -90,13 +90,13 @@
 }
 
 .btn-primary:hover {
-  background: #2BD373;
+  background: #EB7300;
   transform: translateY(-1px);
 }
 
 .btn-secondary {
   background: transparent;
-  color: #33EC87;
+  color: #EB7300;
   border: none;
   font-family: Inter;
   font-weight: 600;
@@ -111,7 +111,7 @@
 }
 
 .btn-secondary:hover {
-  background: rgba(51, 236, 135, 0.1);
+  background: rgba(215, 56, 4, 0.1);
 }
 
 /* Card Components */
@@ -151,7 +151,7 @@
   flex-shrink: 0;
   border-radius: 16px;
   border: 1px solid rgba(141, 141, 159, 0.20);
-  background: linear-gradient(90deg, rgba(141, 141, 159, 0.10) 0%, rgba(0, 255, 178, 0.10) 100%);
+  background: linear-gradient(90deg, rgba(141, 141, 159, 0.10) 0%, rgba(215, 56, 4, 0.10) 100%);
   transition: all 0.3s ease;
   flex-direction: column;
   text-align: left;
@@ -160,7 +160,7 @@
 
 .case-study-card {
   background: linear-gradient(135deg, #0B4A3A 0%, #1A5F4F 100%);
-  border: 1px solid rgba(51, 236, 135, 0.2);
+  border: 1px solid rgba(215, 56, 4, 0.2);
   border-radius: 12px;
   padding: 32px;
   transition: all 0.3s ease;
@@ -169,15 +169,15 @@
 .service-card:hover,
 .case-study-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(51, 236, 135, 0.4);
-  box-shadow: 0 8px 32px rgba(51, 236, 135, 0.1);
+  border-color: rgba(215, 56, 4, 0.4);
+  box-shadow: 0 8px 32px rgba(215, 56, 4, 0.1);
 }
 
 .service-card .icon,
 .case-study-card .icon {
   width: 48px;
   height: 48px;
-  background: #33EC87;
+  background: #EB7300;
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -232,15 +232,15 @@
 .stat-card {
   text-align: center;
   padding: 24px;
-  background: rgba(51, 236, 135, 0.1);
+  background: rgba(215, 56, 4, 0.1);
   border-radius: 12px;
-  border: 1px solid rgba(51, 236, 135, 0.2);
+  border: 1px solid rgba(215, 56, 4, 0.2);
 }
 
 .stat-card .number {
   font-size: 36px;
   font-weight: 700;
-  color: #33EC87;
+  color: #EB7300;
   margin-bottom: 8px;
 }
 
@@ -253,7 +253,7 @@
 .icon-circle {
   width: 60px;
   height: 60px;
-  background: #33EC87;
+  background: #EB7300;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -276,7 +276,7 @@
 .process-step .step-number {
   width: 60px;
   height: 60px;
-  background: #33EC87;
+  background: #EB7300;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -315,7 +315,7 @@
 
 .profile-card {
   background: linear-gradient(135deg, #0B4A3A 0%, #1A5F4F 100%);
-  border: 1px solid rgba(51, 236, 135, 0.2);
+  border: 1px solid rgba(215, 56, 4, 0.2);
   border-radius: 16px;
   padding: 40px;
   text-align: center;
@@ -332,7 +332,7 @@
 .placeholder-image {
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #33EC87 0%, #19FF82 100%);
+  background: linear-gradient(135deg, #EB7300 0%, #FF8C42 100%);
   border-radius: 50%;
 }
 
@@ -367,7 +367,7 @@
 .stat-number {
   font-size: 32px;
   font-weight: 700;
-  color: #33EC87;
+  color: #EB7300;
   margin-bottom: 4px;
 }
 
@@ -385,7 +385,7 @@
 }
 
 .ethos-card {
-  background: linear-gradient(90deg, rgba(141, 141, 159, 0.10) 0%, rgba(0, 255, 178, 0.10) 100%);
+  background: linear-gradient(90deg, rgba(141, 141, 159, 0.10) 0%, rgba(215, 56, 4, 0.10) 100%);
   border: 1px solid rgba(141, 141, 159, 0.20);
   border-radius: 16px;
   padding: 40px;
@@ -395,14 +395,14 @@
 
 .ethos-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(51, 236, 135, 0.4);
-  box-shadow: 0 8px 32px rgba(51, 236, 135, 0.1);
+  border-color: rgba(215, 56, 4, 0.4);
+  box-shadow: 0 8px 32px rgba(215, 56, 4, 0.1);
 }
 
 .ethos-icon {
   width: 60px;
   height: 60px;
-  background: #33EC87;
+  background: #EB7300;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -460,7 +460,7 @@
 .network-stat .stat-number {
   font-size: 24px;
   font-weight: 700;
-  color: #33EC87;
+  color: #EB7300;
   margin-bottom: 4px;
 }
 
@@ -488,14 +488,14 @@
   position: absolute;
   width: 12px;
   height: 12px;
-  background: #33EC87;
+  background: #EB7300;
   border-radius: 50%;
 }
 
 .central-dot {
   width: 60px;
   height: 60px;
-  background: #33EC87;
+  background: #EB7300;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -585,9 +585,9 @@
 
 .filter-btn:hover,
 .filter-btn.active {
-  background: #33EC87;
+  background: #EB7300;
   color: #0D0C1E;
-  border-color: #33EC87;
+  border-color: #EB7300;
 }
 
 .case-studies-grid {
@@ -598,7 +598,7 @@
 }
 
 .case-study-card {
-  background: linear-gradient(90deg, rgba(141, 141, 159, 0.10) 0%, rgba(0, 255, 178, 0.10) 100%);
+  background: linear-gradient(90deg, rgba(141, 141, 159, 0.10) 0%, rgba(215, 56, 4, 0.10) 100%);
   border: 1px solid rgba(141, 141, 159, 0.20);
   border-radius: 16px;
   padding: 32px;
@@ -608,8 +608,8 @@
 
 .case-study-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(51, 236, 135, 0.4);
-  box-shadow: 0 8px 32px rgba(51, 236, 135, 0.1);
+  border-color: rgba(215, 56, 4, 0.4);
+  box-shadow: 0 8px 32px rgba(215, 56, 4, 0.1);
 }
 
 .case-study-tag {
@@ -624,7 +624,7 @@
 }
 
 .case-study-tag.fintech {
-  background: #33EC87;
+  background: #EB7300;
 }
 
 .case-study-tag.ecommerce {
@@ -650,7 +650,7 @@
 .case-study-icon {
   width: 48px;
   height: 48px;
-  background: #33EC87;
+  background: #EB7300;
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -678,7 +678,7 @@
 .detail-item .label {
   font-size: 12px;
   font-weight: 600;
-  color: #33EC87;
+  color: #EB7300;
   display: block;
   margin-bottom: 4px;
 }
@@ -691,7 +691,7 @@
 
 .case-study-result {
   background: linear-gradient(135deg, #0B4A3A 0%, #1A5F4F 100%);
-  border: 1px solid rgba(51, 236, 135, 0.3);
+  border: 1px solid rgba(215, 56, 4, 0.3);
   border-radius: 8px;
   padding: 20px;
   display: flex;
@@ -702,7 +702,7 @@
 .result-number {
   font-size: 32px;
   font-weight: 700;
-  color: #33EC87;
+  color: #EB7300;
   line-height: 1;
 }
 
@@ -762,7 +762,7 @@
 }
 
 .contact-form-card {
-  background: linear-gradient(90deg, rgba(141, 141, 159, 0.10) 0%, rgba(0, 255, 178, 0.10) 100%);
+  background: linear-gradient(90deg, rgba(141, 141, 159, 0.10) 0%, rgba(215, 56, 4, 0.10) 100%);
   border: 1px solid rgba(141, 141, 159, 0.20);
   border-radius: 16px;
   padding: 32px;
@@ -806,8 +806,8 @@
 .form-input:focus,
 .form-textarea:focus {
   outline: none;
-  border-color: #33EC87;
-  background: rgba(51, 236, 135, 0.05);
+  border-color: #EB7300;
+  background: rgba(215, 56, 4, 0.05);
 }
 
 .form-textarea {
@@ -827,7 +827,7 @@
 
 .consultation-section,
 .contact-info-section {
-  background: linear-gradient(90deg, rgba(141, 141, 159, 0.10) 0%, rgba(0, 255, 178, 0.10) 100%);
+  background: linear-gradient(90deg, rgba(141, 141, 159, 0.10) 0%, rgba(215, 56, 4, 0.10) 100%);
   border: 1px solid rgba(141, 141, 159, 0.20);
   border-radius: 16px;
   padding: 32px;
@@ -854,15 +854,15 @@
   gap: 16px;
   margin-bottom: 24px;
   padding: 20px;
-  background: rgba(51, 236, 135, 0.1);
-  border: 1px solid rgba(51, 236, 135, 0.2);
+  background: rgba(215, 56, 4, 0.1);
+  border: 1px solid rgba(215, 56, 4, 0.2);
   border-radius: 12px;
 }
 
 .calendar-icon {
   width: 48px;
   height: 48px;
-  background: #33EC87;
+  background: #EB7300;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -911,7 +911,7 @@
 
 .email-icon {
   background: rgba(51, 236, 135, 0.2);
-  color: #33EC87;
+  color: #EB7300;
 }
 
 .phone-icon {

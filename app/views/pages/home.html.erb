@@ -1,6 +1,279 @@
-<%= render "components/hero" %>
-<%= render "components/strategy_automation" %>
-<%= render "components/service_highlights" %>
-<%= render "components/client_approach" %>
+<!-- Hero Section -->
+<main class="custom-bg">
+  <section class="mx-auto px-8 md:px-9 py-16 lg:py-24 lg:h-[600px] lg:flex lg:items-center" style="max-width: 1350px;">
+    <div class="grid lg:grid-cols-2 gap-32 lg:gap-12 items-center">
+      <div class="space-y-8">
+        <h1 class="text-5xl lg:text-6xl font-bold custom-text leading-tight">
+          AI Strategy Meets Real-World Execution
+        </h1>
+        <p class="text-xl custom-text opacity-80 leading-relaxed">
+          Transform your business with strategic AI implementation that delivers measurable results and sustainable growth.
+        </p>
+        <%= link_to "Book a Consultation", contact_path, class: "custom-accent text-white px-8 py-3 rounded-lg text-lg font-semibold hover:opacity-90 transition-opacity inline-block" %>
+      </div>
+      <div class="flex justify-center mt-16 lg:mt-0">
+        <div class="w-96 h-96 relative">
+          <!-- 3D Brain Model Container -->
+          <div id="brain-model-container" class="w-full h-full"></div>
+          <!-- Pulsating orange circle fallback -->
+          <div id="brain-fallback" class="absolute inset-0 flex items-center justify-center" style="display: block;">
+            <div style="width: 320px; height: 320px;" class="custom-accent rounded-full flex items-center justify-center pulsate-circle">
+              <i class="fas fa-brain text-6xl text-white"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
 
-<%= render "components/final_cta" %>
+
+
+<!-- Why Work With Us Section -->
+<section class="custom-bg py-20">
+  <div class="mx-auto px-8 md:px-9" style="max-width: 1500px;">
+    <div class="text-center" style="margin-bottom: 70px;">
+      <h2 class="text-4xl font-bold custom-text mb-4">Why Work With Us</h2>
+      <p class="text-xl custom-text opacity-80">Four pillars of our AI consultancy approach</p>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-20 md:gap-8" style="margin-bottom: 180px;">
+      <div class="text-center space-y-6 mb-12 md:mb-0">
+        <div class="w-12 h-12 mx-auto">
+          <i class="fas fa-rocket text-4xl custom-accent-text"></i>
+        </div>
+        <h3 class="text-2xl font-semibold custom-text">Efficiency</h3>
+        <p class="custom-text opacity-80">Streamlined processes that maximize ROI</p>
+      </div>
+      <div class="text-center space-y-6 mb-12 md:mb-0">
+        <div class="w-12 h-12 mx-auto">
+          <i class="fas fa-lightbulb text-4xl custom-accent-text"></i>
+        </div>
+        <h3 class="text-2xl font-semibold custom-text">Innovation</h3>
+        <p class="custom-text opacity-80">Cutting-edge solutions for tomorrow's challenges</p>
+      </div>
+      <div class="text-center space-y-6 mb-12 md:mb-0">
+        <div class="w-12 h-12 mx-auto">
+          <i class="fas fa-shield-alt text-4xl custom-accent-text"></i>
+        </div>
+        <h3 class="text-2xl font-semibold custom-text">Trust</h3>
+        <p class="custom-text opacity-80">Secure, reliable AI implementations</p>
+      </div>
+      <div class="text-center space-y-6 mb-12 md:mb-0">
+        <div class="w-12 h-12 mx-auto">
+          <i class="fas fa-chart-line text-4xl custom-accent-text"></i>
+        </div>
+        <h3 class="text-2xl font-semibold custom-text">Results</h3>
+        <p class="custom-text opacity-80">Measurable outcomes that drive growth</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Success Stories Section -->
+<section class="custom-bg py-20">
+  <div class="mx-auto px-8 md:px-9" style="max-width: 1500px;">
+    <div class="text-center" style="margin-bottom: 70px;">
+      <h2 class="text-4xl font-bold custom-text mb-4">Success Stories</h2>
+      <p class="text-xl custom-text opacity-80">Real results from our AI implementations</p>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" style="margin-bottom: 180px;">
+      <div class="rounded-xl border border-gray-700 hover:border-gray-600 transition-all hover:transform hover:scale-105" style="padding: 48px 48px 36px 48px;">
+        <div class="flex flex-col h-full">
+          <div class="w-12 h-12 custom-accent rounded-lg flex items-center justify-center mb-4">
+            <i class="fas fa-chart-bar text-white text-xl"></i>
+          </div>
+          <h3 class="text-2xl font-semibold custom-text mb-3">Compliance Efficiency</h3>
+          <p class="custom-text opacity-80 flex-grow">Custom AI compliance agents for managing internal compliance practices</p>
+          <%= link_to "Read Case Study →", case_studies_path, class: "text-sm custom-accent-text font-medium mt-6" %>
+        </div>
+      </div>
+      <div class="rounded-xl border border-gray-700 hover:border-gray-600 transition-all hover:transform hover:scale-105" style="padding: 48px 48px 36px 48px;">
+        <div class="flex flex-col h-full">
+          <div class="w-12 h-12 custom-accent rounded-lg flex items-center justify-center mb-4">
+            <i class="fas fa-users text-white text-xl"></i>
+          </div>
+          <h3 class="text-2xl font-semibold custom-text mb-3">Linkedin Content Creation</h3>
+          <p class="custom-text opacity-80 flex-grow">Automated content creation and posting for Linkedin</p>
+          <%= link_to "Read Case Study →", case_studies_path, class: "text-sm custom-accent-text font-medium mt-6" %>
+        </div>
+      </div>
+      <div class="rounded-xl border border-gray-700 hover:border-gray-600 transition-all hover:transform hover:scale-105" style="padding: 48px 48px 36px 48px;">
+        <div class="flex flex-col h-full">
+          <div class="w-12 h-12 custom-accent rounded-lg flex items-center justify-center mb-4">
+            <i class="fas fa-brain text-white text-xl"></i>
+          </div>
+          <h3 class="text-2xl font-semibold custom-text mb-3">AI Brand Discovery Agent</h3>
+          <p class="custom-text opacity-80 flex-grow">Automate brand discovery through custom AI agent </p>
+          <%= link_to "Read Case Study →", case_studies_path, class: "text-sm custom-accent-text font-medium mt-6" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="custom-bg py-20" style="margin-bottom: 180px;">
+  <div class="max-w-4xl mx-auto px-6 text-center">
+    <h2 class="text-4xl font-bold custom-text mb-6">Ready to Transform Your Business?</h2>
+    <p class="text-xl custom-text opacity-80 mb-8">
+      Let's discuss how AI can drive your next phase of growth. Schedule a consultation today.
+    </p>
+    <%= link_to "Start the Conversation", contact_path, class: "custom-accent text-white px-8 py-3 rounded-lg text-lg font-semibold hover:opacity-90 transition-opacity inline-block" %>
+  </div>
+</section>
+
+<style>
+/* Pulsating circle animation */
+.pulsate-circle {
+  animation: pulsate 2s ease-in-out infinite;
+}
+
+@keyframes pulsate {
+  0% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+}
+</style>
+
+<script>
+// 3D Brain Model with GLB Loader
+document.addEventListener('DOMContentLoaded', function() {
+  setTimeout(function() {
+    const container = document.getElementById('brain-model-container');
+    const fallback = document.getElementById('brain-fallback');
+
+    if (!container || typeof THREE === 'undefined') {
+      console.log('Container or Three.js not available - showing fallback');
+      return;
+    }
+
+    if (typeof THREE.GLTFLoader === 'undefined') {
+      console.log('GLTFLoader not available - showing fallback');
+      return;
+    }
+
+    console.log('Initializing 3D brain scene...');
+
+    // Basic scene setup
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+
+    renderer.setSize(384, 384);
+    renderer.setClearColor(0x000000, 0);
+    container.appendChild(renderer.domElement);
+
+    // Enhanced orange lighting for glowing brain effect
+    const ambientLight = new THREE.AmbientLight(0x221100, 0.4);
+    scene.add(ambientLight);
+
+    const directionalLight = new THREE.DirectionalLight(0xff6600, 0.8);
+    directionalLight.position.set(2, 2, 2);
+    scene.add(directionalLight);
+
+    const directionalLight2 = new THREE.DirectionalLight(0xaa4400, 0.6);
+    directionalLight2.position.set(-1, -1, 1);
+    scene.add(directionalLight2);
+
+    const directionalLight3 = new THREE.DirectionalLight(0xffaa00, 0.4);
+    directionalLight3.position.set(0, -2, -1);
+    scene.add(directionalLight3);
+
+    camera.position.z = 3;
+    const defaultDistance = 3; // Current zoom as max zoom
+
+
+    // Load the brain model
+    const loader = new THREE.GLTFLoader();
+
+    loader.load('/models/mozgai.glb',
+      function(gltf) {
+        console.log('Brain model loaded successfully');
+        const brainModel = gltf.scene;
+
+        // Scale and position the brain
+        brainModel.scale.setScalar(2);
+        brainModel.position.set(0, 0, 0);
+
+        // Load and apply textures to brain with orange glowing effect
+        const textureLoader = new THREE.TextureLoader();
+
+        const colorTexture = textureLoader.load('/models/Emblemat_Świadomośc_kolor2_1.png',
+          function(texture) {
+            console.log('Color texture loaded successfully');
+          },
+          undefined,
+          function(error) {
+            console.error('Error loading color texture:', error);
+          }
+        );
+
+        const normalTexture = textureLoader.load('/models/Emblemat_Świadomośc_normalmap_2.png',
+          function(texture) {
+            console.log('Normal texture loaded successfully');
+          },
+          undefined,
+          function(error) {
+            console.error('Error loading normal texture:', error);
+          }
+        );
+
+        brainModel.traverse(function(child) {
+          if (child.isMesh) {
+            child.material = new THREE.MeshStandardMaterial({
+              map: colorTexture,
+              normalMap: normalTexture,
+              emissive: new THREE.Color(0xEB7300), // Brand orange glow
+              emissiveIntensity: 2.0, // Strong glow
+              emissiveMap: colorTexture,
+              transparent: true,
+              opacity: 0.8, // Less translucent, more solid
+              alphaTest: 0.1, // Remove very dark areas
+              side: THREE.DoubleSide, // Render both sides
+              metalness: 0.0,
+              roughness: 0.05, // Very smooth for more glow
+              depthWrite: false // Better transparency rendering
+            });
+          }
+        });
+
+        scene.add(brainModel);
+
+        // Hide fallback once model loads
+        if (fallback) fallback.style.display = 'none';
+
+        // Animation loop with rotation only
+        function animate() {
+          requestAnimationFrame(animate);
+
+          // Continue rotating brain
+          brainModel.rotation.y += 0.005;
+
+          renderer.render(scene, camera);
+        }
+
+        animate();
+        console.log('Brain model is now rotating');
+      },
+      function(progress) {
+        console.log('Loading progress: ', (progress.loaded / progress.total * 100) + '%');
+      },
+      function(error) {
+        console.error('Error loading brain model:', error);
+        console.log('Keeping fallback visible');
+      }
+    );
+
+  }, 1000);
+});
+</script>

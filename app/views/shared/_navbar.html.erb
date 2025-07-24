@@ -1,25 +1,75 @@
-<div class="navbar">
-  <div class="navbar-container">
-    <!-- Logo -->
-    <%= link_to "Consilix.ai", root_path, class: "navbar-logo" %>
-    
-    <!-- Navigation -->
-    <div class="navbar-nav">
-      <%= link_to "Home", root_path, class: "navbar-link #{current_page?(root_path) ? 'active' : ''}" %>
-      <%= link_to "Services", services_path, class: "navbar-link #{current_page?(services_path) ? 'active' : ''}" %>
-      <%= link_to "About", about_path, class: "navbar-link #{current_page?(about_path) ? 'active' : ''}" %>
-      <%= link_to "Case Studies", case_studies_path, class: "navbar-link #{current_page?(case_studies_path) ? 'active' : ''}" %>
-      <%= link_to "Contact", contact_path, class: "navbar-link #{current_page?(contact_path) ? 'active' : ''}" %>
+<header class="custom-bg border-b border-gray-800">
+  <nav class="mx-auto px-8 md:px-9 py-6" style="max-width: 1500px;">
+    <div class="flex items-center justify-between">
+      <!-- Logo with icon -->
+      <div class="flex items-center space-x-2">
+        <div class="w-8 h-8 custom-accent rounded-lg flex items-center justify-center">
+          <i class="fas fa-brain text-white text-lg"></i>
+        </div>
+        <%= link_to root_path, class: "text-xl font-bold custom-text hover:no-underline" do %>
+          Consilix.ai
+        <% end %>
+      </div>
+      
+      <!-- Desktop Navigation and CTA -->
+      <div class="desktop-nav items-center">
+        <div class="flex items-center space-x-8 mr-8">
+          <%= link_to "Home", root_path, class: "custom-text hover:custom-accent-text transition-colors whitespace-nowrap" %>
+          <%= link_to "Services", services_path, class: "custom-text hover:custom-accent-text transition-colors whitespace-nowrap" %>
+          <%= link_to "Case Studies", case_studies_path, class: "custom-text hover:custom-accent-text transition-colors whitespace-nowrap" %>
+          <%= link_to "About", about_path, class: "custom-text hover:custom-accent-text transition-colors whitespace-nowrap" %>
+          <%= link_to "Contact", contact_path, class: "custom-text hover:custom-accent-text transition-colors whitespace-nowrap" %>
+        </div>
+        <%= link_to "Start Your AI Journey", contact_path, class: "custom-accent text-white px-8 py-3 rounded-lg hover:opacity-90 transition-opacity font-medium whitespace-nowrap" %>
+      </div>
+      
+      <!-- Mobile menu button -->
+      <button class="mobile-menu-button custom-text" onclick="toggleMobileMenu()">
+        <i class="fas fa-bars text-xl"></i>
+      </button>
     </div>
     
-    <!-- CTA Button -->
-    <%= link_to "Book a Call", "#contact", class: "navbar-cta" %>
-    
-    <!-- Mobile menu button -->
-    <button class="navbar-mobile-btn">
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-      </svg>
-    </button>
-  </div>
-</div>
+    <!-- Mobile menu (hidden by default) -->
+    <div id="mobile-menu" class="hidden mt-4 pb-4" style="display: none;">
+      <div class="flex flex-col space-y-4">
+        <%= link_to "Home", root_path, class: "custom-text hover:custom-accent-text transition-colors py-2" %>
+        <%= link_to "Services", services_path, class: "custom-text hover:custom-accent-text transition-colors py-2" %>
+        <%= link_to "Case Studies", case_studies_path, class: "custom-text hover:custom-accent-text transition-colors py-2" %>
+        <%= link_to "About", about_path, class: "custom-text hover:custom-accent-text transition-colors py-2" %>
+        <%= link_to "Contact", contact_path, class: "custom-text hover:custom-accent-text transition-colors py-2" %>
+        <%= link_to "Start Your AI Journey", contact_path, class: "mt-4 custom-accent text-white px-6 py-3 rounded-lg hover:opacity-90 transition-opacity font-medium text-center inline-block" %>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<script>
+function toggleMobileMenu() {
+  const mobileMenu = document.getElementById('mobile-menu');
+  const hamburger = document.querySelector('.fa-bars, .fa-times');
+  
+  if (mobileMenu.style.display === 'none' || mobileMenu.style.display === '') {
+    mobileMenu.style.display = 'block';
+    hamburger.classList.remove('fa-bars');
+    hamburger.classList.add('fa-times');
+  } else {
+    mobileMenu.style.display = 'none';
+    hamburger.classList.remove('fa-times');
+    hamburger.classList.add('fa-bars');
+  }
+}
+
+// Close mobile menu when clicking on a link
+document.addEventListener('DOMContentLoaded', function() {
+  const mobileMenuLinks = document.querySelectorAll('#mobile-menu a');
+  mobileMenuLinks.forEach(link => {
+    link.addEventListener('click', function() {
+      const mobileMenu = document.getElementById('mobile-menu');
+      const hamburger = document.querySelector('.fa-bars, .fa-times');
+      mobileMenu.style.display = 'none';
+      hamburger.classList.remove('fa-times');
+      hamburger.classList.add('fa-bars');
+    });
+  });
+});
+</script>

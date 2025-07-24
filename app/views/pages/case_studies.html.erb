@@ -1,232 +1,172 @@
-<!-- Case Studies Page -->
-
 <!-- Hero Section -->
-<div class="hero-section">
-  <h1>Case Studies</h1>
-  <p class="subtitle">Real solutions. Real results. Real impact.</p>
-</div>
-
-<!-- Filter Section -->
-<div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 24px;">
-  <div class="case-studies-filters">
-    <button class="filter-btn active" data-filter="all">All Projects</button>
-    <button class="filter-btn" data-filter="automation">AI Automation</button>
-    <button class="filter-btn" data-filter="agent">Agent Builds</button>
-    <button class="filter-btn" data-filter="strategy">Dev Strategy</button>
-    <button class="filter-btn" data-filter="workflow">Custom Workflows</button>
-  </div>
-</div>
+<main class="custom-bg">
+  <section class="mx-auto px-8 md:px-9 py-16 lg:py-24" style="max-width: 1500px;">
+    <div class="text-center max-w-4xl mx-auto">
+      <h1 class="text-5xl lg:text-6xl font-bold custom-text leading-tight mb-6">
+        AI in Action
+      </h1>
+      <hr style="width: 64px; height: 4px; background-color: #EB7300; border: none; margin: 0 auto 32px auto;" />
+      <p class="text-xl custom-text opacity-80 leading-relaxed">
+        How Consilix.ai partners with enterprise teams to deliver measurable results.
+      </p>
+    </div>
+  </section>
+</main>
 
 <!-- Case Studies Grid -->
-<div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 24px;">
-  <div class="case-studies-grid">
-    
-    <!-- Payment Processing Automation -->
-    <div class="case-study-card" data-category="automation">
-      <div class="case-study-tag fintech">FinTech</div>
-      <div class="case-study-icon">
-        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M12 2C6.48 2 2 6.48 2 12S6.48 22 12 22 22 17.52 22 12 17.52 2 12 2ZM10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z"/>
-        </svg>
-      </div>
-      <h3>Payment Processing Automation</h3>
-      <div class="case-study-details">
-        <div class="detail-item">
-          <span class="label">Challenge:</span>
-          <span class="value">Manual invoice transactions taking too much time and prone to human error</span>
-        </div>
-        <div class="detail-item">
-          <span class="label">Solution:</span>
-          <span class="value">Intelligent invoice handling with OCR capabilities and automated payment routing</span>
-        </div>
-      </div>
-      <div class="case-study-result">
-        <div class="result-number">95%</div>
-        <div class="result-text">
-          <div>Cost Reduction</div>
-          <div class="result-subtitle">In manual invoice processing time</div>
+<section class="custom-bg py-20">
+  <div class="mx-auto px-8 md:px-9" style="max-width: 1500px;">
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" style="margin-bottom: 180px;">
+      
+      <!-- Route Optimization System -->
+      <div class="case-card bg-gray-900 bg-opacity-20 rounded-xl p-8 border border-gray-700 hover:border-gray-600 transition-all hover:transform hover:scale-105">
+        <div class="flex flex-col h-full">
+          <div class="mb-6">
+            <span class="inline-block custom-accent text-white text-sm font-medium rounded-lg" style="padding: 4px 12px;">
+              Predictive Analytics
+            </span>
+          </div>
+          <div class="flex-grow">
+            <h3 class="text-xl font-bold custom-text mb-3">Route Optimization System</h3>
+            <p class="custom-text opacity-70 text-sm mb-4">Enterprise Logistics Co.</p>
+            <p class="custom-text opacity-80 leading-relaxed mb-6">
+              Improved delivery accuracy by 24% using LLMs to model route failure risk in real-time across 500+ daily routes.
+            </p>
+          </div>
+          <%= link_to case_studies_path, class: "inline-flex items-center custom-accent-text font-semibold hover:opacity-80 transition-opacity text-sm mt-auto" do %>
+            Read Full Story <i class="fas fa-arrow-right ml-2 text-xs"></i>
+          <% end %>
         </div>
       </div>
-    </div>
 
-    <!-- Customer Service AI Agent -->
-    <div class="case-study-card" data-category="agent">
-      <div class="case-study-tag ecommerce">E-Commerce</div>
-      <div class="case-study-icon">
-        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M20 2H4C2.9 2 2 2.9 2 4V22L6 18H20C21.1 18 22 17.1 22 16V4C22 2.9 21.1 2 20 2ZM20 16H5.17L4 17.17V4H20V16Z"/>
-        </svg>
-      </div>
-      <h3>Customer Service AI Agent</h3>
-      <div class="case-study-details">
-        <div class="detail-item">
-          <span class="label">Challenge:</span>
-          <span class="value">High volume support with limited human resources and inconsistent response quality</span>
-        </div>
-        <div class="detail-item">
-          <span class="label">Solution:</span>
-          <span class="value">Intelligent chatbot handling 80% of customer queries with seamless human handoff</span>
-        </div>
-      </div>
-      <div class="case-study-result">
-        <div class="result-number">60%</div>
-        <div class="result-text">
-          <div>Response Time</div>
-          <div class="result-subtitle">Improvement in customer support</div>
+      <!-- Claims Processing Agent -->
+      <div class="case-card bg-gray-900 bg-opacity-20 rounded-xl p-8 border border-gray-700 hover:border-gray-600 transition-all hover:transform hover:scale-105">
+        <div class="flex flex-col h-full">
+          <div class="mb-6">
+            <span class="inline-block custom-accent text-white text-sm font-medium rounded-lg" style="padding: 4px 12px;">
+              Workflow Automation
+            </span>
+          </div>
+          <div class="flex-grow">
+            <h3 class="text-xl font-bold custom-text mb-3">Claims Processing Agent</h3>
+            <p class="custom-text opacity-70 text-sm mb-4">Regional Insurance Provider</p>
+            <p class="custom-text opacity-80 leading-relaxed mb-6">
+              Reduced claim processing time from 14 days to 2 hours while maintaining 99.7% accuracy in fraud detection.
+            </p>
+          </div>
+          <%= link_to case_studies_path, class: "inline-flex items-center custom-accent-text font-semibold hover:opacity-80 transition-opacity text-sm mt-auto" do %>
+            Read Full Story <i class="fas fa-arrow-right ml-2 text-xs"></i>
+          <% end %>
         </div>
       </div>
-    </div>
 
-    <!-- Operational Efficiency Overhaul -->
-    <div class="case-study-card" data-category="strategy">
-      <div class="case-study-tag healthcare">HealthCare</div>
-      <div class="case-study-icon">
-        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M9 12L11 14L15 10M21 12C21 16.97 16.97 21 12 21C7.03 21 3 16.97 3 12C3 7.03 7.03 3 12 3C16.97 3 21 7.03 21 12Z"/>
-        </svg>
-      </div>
-      <h3>Operational Efficiency Overhaul</h3>
-      <div class="case-study-details">
-        <div class="detail-item">
-          <span class="label">Challenge:</span>
-          <span class="value">Disconnected systems causing data loss and inefficient workflows</span>
-        </div>
-        <div class="detail-item">
-          <span class="label">Solution:</span>
-          <span class="value">Comprehensive system unification with automated reporting and data analytics</span>
-        </div>
-      </div>
-      <div class="case-study-result">
-        <div class="result-number">3x</div>
-        <div class="result-text">
-          <div>Data Processing</div>
-          <div class="result-subtitle">Speed improvement across all departments</div>
+      <!-- Personalization Engine -->
+      <div class="case-card bg-gray-900 bg-opacity-20 rounded-xl p-8 border border-gray-700 hover:border-gray-600 transition-all hover:transform hover:scale-105">
+        <div class="flex flex-col h-full">
+          <div class="mb-6">
+            <span class="inline-block custom-accent text-white text-sm font-medium rounded-lg" style="padding: 4px 12px;">
+              Customer Intelligence
+            </span>
+          </div>
+          <div class="flex-grow">
+            <h3 class="text-xl font-bold custom-text mb-3">Personalization Engine</h3>
+            <p class="custom-text opacity-70 text-sm mb-4">E-commerce Platform</p>
+            <p class="custom-text opacity-80 leading-relaxed mb-6">
+              Increased conversion rates by 31% through AI-driven product recommendations and dynamic pricing optimization.
+            </p>
+          </div>
+          <%= link_to case_studies_path, class: "inline-flex items-center custom-accent-text font-semibold hover:opacity-80 transition-opacity text-sm mt-auto" do %>
+            Read Full Story <i class="fas fa-arrow-right ml-2 text-xs"></i>
+          <% end %>
         </div>
       </div>
-    </div>
 
-    <!-- Predictive Maintenance System -->
-    <div class="case-study-card" data-category="automation">
-      <div class="case-study-tag manufacturing">Manufacturing</div>
-      <div class="case-study-icon">
-        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M12 2L3.09 8.26L4 9L12 4L20 9L20.91 8.26L12 2ZM21 16V10L12 15L3 10V16L12 21L21 16Z"/>
-        </svg>
-      </div>
-      <h3>Predictive Maintenance System</h3>
-      <div class="case-study-details">
-        <div class="detail-item">
-          <span class="label">Challenge:</span>
-          <span class="value">Unexpected equipment failures causing costly production downtime</span>
-        </div>
-        <div class="detail-item">
-          <span class="label">Solution:</span>
-          <span class="value">IoT sensors with machine learning algorithms predicting failures before they impact</span>
-        </div>
-      </div>
-      <div class="case-study-result">
-        <div class="result-number">85%</div>
-        <div class="result-text">
-          <div>Downtime Reduction</div>
-          <div class="result-subtitle">Through predictive maintenance alerts</div>
+      <!-- Contract Analysis System -->
+      <div class="case-card bg-gray-900 bg-opacity-20 rounded-xl p-8 border border-gray-700 hover:border-gray-600 transition-all hover:transform hover:scale-105">
+        <div class="flex flex-col h-full">
+          <div class="mb-6">
+            <span class="inline-block custom-accent text-white text-sm font-medium rounded-lg" style="padding: 4px 12px;">
+              Document Processing
+            </span>
+          </div>
+          <div class="flex-grow">
+            <h3 class="text-xl font-bold custom-text mb-3">Contract Analysis System</h3>
+            <p class="custom-text opacity-70 text-sm mb-4">Legal Services Firm</p>
+            <p class="custom-text opacity-80 leading-relaxed mb-6">
+              Automated contract review process, reducing legal review time by 60% while identifying 94% more risk clauses.
+            </p>
+          </div>
+          <%= link_to case_studies_path, class: "inline-flex items-center custom-accent-text font-semibold hover:opacity-80 transition-opacity text-sm mt-auto" do %>
+            Read Full Story <i class="fas fa-arrow-right ml-2 text-xs"></i>
+          <% end %>
         </div>
       </div>
-    </div>
 
-    <!-- Supply Chain Optimization -->
-    <div class="case-study-card" data-category="workflow">
-      <div class="case-study-tag logistics">Logistics</div>
-      <div class="case-study-icon">
-        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M19 7H18V6C18 5.45 17.55 5 17 5H7C6.45 5 6 5.45 6 6V7H5C4.45 7 4 7.45 4 8V19C4 19.55 4.45 20 5 20H19C19.55 20 20 19.55 20 19V8C20 7.45 19.55 7 19 7ZM16 7H8V6.5C8 6.22 8.22 6 8.5 6H15.5C15.78 6 16 6.22 16 6.5V7Z"/>
-        </svg>
-      </div>
-      <h3>Supply Chain Optimization</h3>
-      <div class="case-study-details">
-        <div class="detail-item">
-          <span class="label">Challenge:</span>
-          <span class="value">Inefficient routing and inventory management increasing costs and delivery times</span>
-        </div>
-        <div class="detail-item">
-          <span class="label">Solution:</span>
-          <span class="value">AI-powered route optimization with real-time inventory tracking</span>
-        </div>
-      </div>
-      <div class="case-study-result">
-        <div class="result-number">40%</div>
-        <div class="result-text">
-          <div>Cost Reduction</div>
-          <div class="result-subtitle">In operational and delivery costs</div>
+      <!-- Demand Forecasting Model -->
+      <div class="case-card bg-gray-900 bg-opacity-20 rounded-xl p-8 border border-gray-700 hover:border-gray-600 transition-all hover:transform hover:scale-105">
+        <div class="flex flex-col h-full">
+          <div class="mb-6">
+            <span class="inline-block custom-accent text-white text-sm font-medium rounded-lg" style="padding: 4px 12px;">
+              Supply Chain
+            </span>
+          </div>
+          <div class="flex-grow">
+            <h3 class="text-xl font-bold custom-text mb-3">Demand Forecasting Model</h3>
+            <p class="custom-text opacity-70 text-sm mb-4">Manufacturing Corporation</p>
+            <p class="custom-text opacity-80 leading-relaxed mb-6">
+              Improved inventory accuracy by 35% using multi-modal AI to predict demand patterns across 12 product lines.
+            </p>
+          </div>
+          <%= link_to case_studies_path, class: "inline-flex items-center custom-accent-text font-semibold hover:opacity-80 transition-opacity text-sm mt-auto" do %>
+            Read Full Story <i class="fas fa-arrow-right ml-2 text-xs"></i>
+          <% end %>
         </div>
       </div>
-    </div>
 
-    <!-- Property Management AI -->
-    <div class="case-study-card" data-category="agent">
-      <div class="case-study-tag realestate">Real Estate</div>
-      <div class="case-study-icon">
-        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M10 20V14H14V20H19V12H22L12 3L2 12H5V20H10Z"/>
-        </svg>
-      </div>
-      <h3>Property Management AI</h3>
-      <div class="case-study-details">
-        <div class="detail-item">
-          <span class="label">Challenge:</span>
-          <span class="value">Managing thousands of properties with insufficient operational staff</span>
-        </div>
-        <div class="detail-item">
-          <span class="label">Solution:</span>
-          <span class="value">Intelligent tenant screening and lease processing with automated tenant communications</span>
-        </div>
-      </div>
-      <div class="case-study-result">
-        <div class="result-number">70%</div>
-        <div class="result-text">
-          <div>Admin Efficiency</div>
-          <div class="result-subtitle">Improvement in property management workflow</div>
+      <!-- Risk Assessment Platform -->
+      <div class="case-card bg-gray-900 bg-opacity-20 rounded-xl p-8 border border-gray-700 hover:border-gray-600 transition-all hover:transform hover:scale-105">
+        <div class="flex flex-col h-full">
+          <div class="mb-6">
+            <span class="inline-block custom-accent text-white text-sm font-medium rounded-lg" style="padding: 4px 12px;">
+              Financial Analytics
+            </span>
+          </div>
+          <div class="flex-grow">
+            <h3 class="text-xl font-bold custom-text mb-3">Risk Assessment Platform</h3>
+            <p class="custom-text opacity-70 text-sm mb-4">Investment Bank</p>
+            <p class="custom-text opacity-80 leading-relaxed mb-6">
+              Enhanced portfolio risk detection by 40% through real-time market sentiment analysis and predictive modeling.
+            </p>
+          </div>
+          <%= link_to case_studies_path, class: "inline-flex items-center custom-accent-text font-semibold hover:opacity-80 transition-opacity text-sm mt-auto" do %>
+            Read Full Story <i class="fas fa-arrow-right ml-2 text-xs"></i>
+          <% end %>
         </div>
       </div>
-    </div>
 
+    </div>
   </div>
-</div>
+</section>
 
-<!-- Final CTA Section -->
-<div class="cta-section">
-  <h2>Ready for Your Success Story?</h2>
-  <p>Let's discuss how our strategic approach can accelerate your business with AI-powered solutions.</p>
-  <a href="#contact" class="btn-primary">Start Your Project</a>
-</div>
+<!-- CTA Section -->
+<section class="custom-bg py-20" style="margin-bottom: 180px;">
+  <div class="max-w-4xl mx-auto px-6 text-center">
+    <h2 class="text-3xl font-bold custom-text mb-6">Curious how this applies to your business?</h2>
+    <p class="text-lg custom-text opacity-80 mb-8">
+      Every implementation is tailored to specific operational needs and strategic objectives.
+    </p>
+    <%= link_to "Start a Conversation", contact_path, class: "custom-accent text-white px-8 py-3 rounded-lg text-lg font-semibold hover:opacity-90 transition-opacity inline-block" %>
+  </div>
+</section>
 
-<script>
-// Filter functionality
-document.addEventListener('DOMContentLoaded', function() {
-  const filterBtns = document.querySelectorAll('.filter-btn');
-  const caseStudyCards = document.querySelectorAll('.case-study-card');
+<style>
+.case-card {
+  transition: all 0.3s ease;
+}
 
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', function() {
-      // Remove active class from all buttons
-      filterBtns.forEach(b => b.classList.remove('active'));
-      // Add active class to clicked button
-      this.classList.add('active');
-
-      const filter = this.getAttribute('data-filter');
-
-      caseStudyCards.forEach(card => {
-        if (filter === 'all') {
-          card.style.display = 'block';
-        } else {
-          const category = card.getAttribute('data-category');
-          if (category === filter) {
-            card.style.display = 'block';
-          } else {
-            card.style.display = 'none';
-          }
-        }
-      });
-    });
-  });
-});
+.case-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(235, 115, 0, 0.1);
+}
+</style>
 </script>

@@ -1,10 +1,10 @@
-.navbar {
-  background: #0D0C1E;
-  height: 72px;
-  padding: 16px 24px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* Reset link styles in navbar */
+header a {
+  text-decoration: none !important;
+}
+
+header nav {
+  background: #001524;
 }
 
 .navbar-container {
@@ -16,7 +16,7 @@
 }
 
 .navbar-logo {
-  color: #33EC87;
+  color: #EB7300;
   font-family: Inter;
   font-weight: 700;
   font-size: 24px;
@@ -36,7 +36,7 @@
 }
 
 .navbar-link {
-  color: #F1F1F1;
+  color: #FFECD1;
   font-family: Inter;
   font-size: 16px;
   font-weight: 400;
@@ -46,17 +46,17 @@
 }
 
 .navbar-link:hover {
-  color: #33EC87;
+  color: #EB7300;
 }
 
 .navbar-link.active {
-  color: #33EC87;
+  color: #EB7300;
   font-weight: 500;
 }
 
 .navbar-cta {
-  background: #33EC87;
-  color: #0D0C1E;
+  background: #EB7300;
+  color: #001524;
   font-family: Inter;
   font-weight: 600;
   border-radius: 8px;
@@ -71,7 +71,7 @@
 }
 
 .navbar-cta:hover {
-  background: #2BD373;
+  background: #EB7300;
 }
 
 @media (max-width: 1024px) {
