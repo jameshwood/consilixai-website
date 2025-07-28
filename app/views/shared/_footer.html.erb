@@ -2,7 +2,7 @@
   <div class="mx-auto px-8 md:px-9" style="max-width: 1500px;">
     <div class="flex flex-wrap justify-between gap-8">
       <!-- Logo and description -->
-      <div class="space-y-4">
+      <div class="space-y-4" style="max-width: 200px;">
         <div class="flex items-center space-x-2">
           <div class="w-8 h-8 custom-accent rounded-lg flex items-center justify-center">
             <i class="fas fa-brain text-white text-lg"></i>
@@ -12,13 +12,13 @@
         <p class="custom-text opacity-60">Strategic AI consultancy for enterprise transformation</p>
       </div>
       
-      <!-- Services -->
+      <!-- Policies -->
       <div class="space-y-4">
-        <h4 class="font-semibold custom-text">Services</h4>
+        <h4 class="font-semibold custom-text">Policies</h4>
         <div class="space-y-2">
-          <%= link_to "Content Agent", services_path, class: "block custom-text opacity-60 hover:opacity-100 transition-opacity" %>
-          <%= link_to "AI Operations", services_path, class: "block custom-text opacity-60 hover:opacity-100 transition-opacity" %>
-          <%= link_to "Custom Workflows", services_path, class: "block custom-text opacity-60 hover:opacity-100 transition-opacity" %>
+          <%= link_to "Privacy Policy", "#", class: "block custom-text opacity-60 hover:custom-accent-text hover:opacity-100 transition-all" %>
+          <%= link_to "Terms of Service", "#", class: "block custom-text opacity-60 hover:custom-accent-text hover:opacity-100 transition-all" %>
+          <%= link_to "Cookie Policy", "#", class: "block custom-text opacity-60 hover:custom-accent-text hover:opacity-100 transition-all" %>
         </div>
       </div>
       
@@ -26,24 +26,24 @@
       <div class="space-y-4">
         <h4 class="font-semibold custom-text">Company</h4>
         <div class="space-y-2">
-          <%= link_to "About Us", about_path, class: "block custom-text opacity-60 hover:opacity-100 transition-opacity" %>
-          <%= link_to "Case Studies", case_studies_path, class: "block custom-text opacity-60 hover:opacity-100 transition-opacity" %>
-          <%= link_to "Contact", contact_path, class: "block custom-text opacity-60 hover:opacity-100 transition-opacity" %>
+          <%= link_to "About Us", about_path, class: "block custom-text opacity-60 hover:custom-accent-text hover:opacity-100 transition-all" %>
+          <%# <%= link_to "Case Studies", case_studies_path, class: "block custom-text opacity-60 hover:opacity-100 transition-opacity" %>
+          <%= link_to "Contact", contact_path, class: "block custom-text opacity-60 hover:custom-accent-text hover:opacity-100 transition-all" %>
         </div>
       </div>
       
       <!-- Connect -->
       <div class="space-y-4">
         <h4 class="font-semibold custom-text">Connect</h4>
-        <div class="flex space-x-4">
-          <a href="#" class="custom-text opacity-60 hover:opacity-100 transition-opacity">
-            <i class="fab fa-linkedin text-xl"></i>
+        <div class="flex" style="gap: 24px;">
+          <a href="#" class="custom-text opacity-60 hover:custom-accent-text hover:opacity-100 transition-all">
+            <i class="fab fa-linkedin text-2xl"></i>
           </a>
-          <a href="#" class="custom-text opacity-60 hover:opacity-100 transition-opacity">
-            <i class="fab fa-twitter text-xl"></i>
+          <a href="#" class="custom-text opacity-60 hover:custom-accent-text hover:opacity-100 transition-all">
+            <i class="fab fa-twitter text-2xl"></i>
           </a>
-          <a href="#" class="custom-text opacity-60 hover:opacity-100 transition-opacity">
-            <i class="fab fa-github text-xl"></i>
+          <a href="#" class="custom-text opacity-60 hover:custom-accent-text hover:opacity-100 transition-all">
+            <i class="fab fa-github text-2xl"></i>
           </a>
         </div>
       </div>

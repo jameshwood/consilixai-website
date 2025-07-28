@@ -92,3 +92,27 @@ header nav {
     display: none;
   }
 }
+
+/* Ensure hover effects work on navbar links */
+.desktop-nav a:not(.custom-accent):hover {
+  color: #EB7300 !important;
+}
+
+/* Mobile menu hover effects */
+#mobile-menu a:not(.custom-accent):hover {
+  color: #EB7300 !important;
+}
+
+/* Footer link hover effects */
+footer a:hover {
+  color: #EB7300 !important;
+}
+
+/* Ensure transitions work */
+.transition-colors {
+  transition: color 0.3s ease;
+}
+
+.transition-all {
+  transition: all 0.3s ease;
+}
