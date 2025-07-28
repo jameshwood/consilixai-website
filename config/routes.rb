@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get 'about', to: 'pages#about'
   get 'case-studies', to: 'pages#case_studies'
   get 'contact', to: 'pages#contact'
+  post 'contact', to: 'pages#create_contact'
   get 'terms-and-conditions', to: 'pages#terms'
   get 'privacy-policy', to: 'pages#privacy'
   get 'cookies', to: 'pages#cookies'

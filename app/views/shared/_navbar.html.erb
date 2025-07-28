@@ -1,15 +1,10 @@
 <header class="custom-bg border-b border-gray-800">
   <nav class="mx-auto px-8 md:px-9 py-6" style="max-width: 1500px;">
     <div class="flex items-center justify-between">
-      <!-- Logo with icon -->
-      <div class="flex items-center space-x-2">
-        <div class="w-8 h-8 custom-accent rounded-lg flex items-center justify-center">
-          <i class="fas fa-brain text-white text-lg"></i>
-        </div>
-        <%= link_to root_path, class: "text-xl font-bold custom-text hover:no-underline" do %>
-          Consilix.ai
-        <% end %>
-      </div>
+      <!-- Logo with image -->
+      <%= link_to root_path, class: "flex items-center space-x-3 hover:no-underline" do %>
+        <%= image_tag "Logo_name_buttercream.png", alt: "Consilix.ai", style: "height: 50px; width: auto;" %>
+      <% end %>
       
       <!-- Desktop Navigation and CTA -->
       <div class="desktop-nav items-center">

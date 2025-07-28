@@ -36,6 +36,4 @@ test:
 
 production:
   <<: *default
-  database: <%= File.basename(Dir.getwd) %>_production
-  username: lightning
-  password: <%= ENV["LIGHTNING_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>

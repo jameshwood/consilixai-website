@@ -3,15 +3,11 @@
     <div class="flex flex-wrap justify-between gap-8">
       <!-- Logo and description -->
       <div class="space-y-4" style="max-width: 200px;">
-        <div class="flex items-center space-x-2">
-          <div class="w-8 h-8 custom-accent rounded-lg flex items-center justify-center">
-            <i class="fas fa-brain text-white text-lg"></i>
-          </div>
-          <span class="text-xl font-bold custom-text">Consilix.ai</span>
-        </div>
-        <p class="custom-text opacity-60">Strategic AI consultancy for enterprise transformation</p>
+        <%= link_to root_path, class: "flex items-center hover:no-underline" do %>
+          <%= image_tag "Logo_name_buttercream.png", alt: "Consilix.ai", style: "height: 50px; width: auto;" %>
+        <% end %>
       </div>
-      
+
       <!-- Policies -->
       <div class="space-y-4">
         <h4 class="font-semibold custom-text">Policies</h4>
@@ -21,7 +17,7 @@
           <%= link_to "Cookie Policy", "#", class: "block custom-text opacity-60 hover:custom-accent-text hover:opacity-100 transition-all" %>
         </div>
       </div>
-      
+
       <!-- Company -->
       <div class="space-y-4">
         <h4 class="font-semibold custom-text">Company</h4>
@@ -31,7 +27,7 @@
           <%= link_to "Contact", contact_path, class: "block custom-text opacity-60 hover:custom-accent-text hover:opacity-100 transition-all" %>
         </div>
       </div>
-      
+
       <!-- Connect -->
       <div class="space-y-4">
         <h4 class="font-semibold custom-text">Connect</h4>
@@ -40,15 +36,12 @@
             <i class="fab fa-linkedin text-2xl"></i>
           </a>
           <a href="#" class="custom-text opacity-60 hover:custom-accent-text hover:opacity-100 transition-all">
-            <i class="fab fa-twitter text-2xl"></i>
-          </a>
-          <a href="#" class="custom-text opacity-60 hover:custom-accent-text hover:opacity-100 transition-all">
             <i class="fab fa-github text-2xl"></i>
           </a>
         </div>
       </div>
     </div>
-    
+
     <!-- Copyright -->
     <div class="border-t border-gray-800 mt-8 pt-8 text-center">
       <p class="custom-text opacity-60">© 2024 Consilix.ai. All rights reserved.</p>

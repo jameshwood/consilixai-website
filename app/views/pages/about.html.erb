@@ -7,7 +7,7 @@
       </h1>
       <hr style="width: 64px; height: 4px; background-color: #EB7300; border: none; margin: 0 auto 32px auto;" />
       <p class="text-xl custom-text opacity-80 leading-relaxed">
-        We're a team of AI strategists and builders helping companies move from intent to intelligent execution.
+       AI strategists and builders helping companies move from intent to intelligent execution.
       </p>
     </div>
   </section>
@@ -16,10 +16,10 @@
 <!-- Mission and Philosophy Section -->
 <section class="custom-bg py-20">
   <div class="mx-auto px-8 md:px-9" style="max-width: 1500px;">
-    <div class="flex justify-center gap-8" style="margin-bottom: 180px;">
+    <div class="grid md:grid-cols-2 gap-8 md:gap-12" style="margin-bottom: 180px;">
 
       <!-- Why We Exist Box -->
-      <div class="w-1/2 p-8">
+      <div class="p-6 md:p-8">
         <h2 class="text-2xl font-bold custom-text mb-2">Why We Exist</h2>
         <div class="w-16 h-0.5 custom-accent mb-6"></div>
         <p class="custom-text opacity-80 leading-relaxed text-lg">
@@ -28,14 +28,26 @@
       </div>
 
       <!-- How We Work Box -->
-      <div class="w-1/2 p-8">
+      <div class="p-6 md:p-8">
         <h2 class="text-2xl font-bold custom-text mb-2">How We Work</h2>
         <div class="w-16 h-0.5 custom-accent mb-6"></div>
         <div class="space-y-3">
-          <p class="custom-text opacity-80 text-lg leading-relaxed"><span style="color: #EB7300;">•</span>&nbsp;&nbsp;&nbsp;Strategy before code</p>
-          <p class="custom-text opacity-80 text-lg leading-relaxed"><span style="color: #EB7300;">•</span>&nbsp;&nbsp;&nbsp;Real-world ROI over proof-of-concept polish</p>
-          <p class="custom-text opacity-80 text-lg leading-relaxed"><span style="color: #EB7300;">•</span>&nbsp;&nbsp;&nbsp;Systems thinking over single models</p>
-          <p class="custom-text opacity-80 text-lg leading-relaxed"><span style="color: #EB7300;">•</span>&nbsp;&nbsp;&nbsp;Partnership over product</p>
+          <div class="flex items-start" style="gap: 12px;">
+            <span class="custom-accent-text text-lg mt-1">•</span>
+            <p class="custom-text opacity-80 text-lg leading-relaxed">Strategy before code</p>
+          </div>
+          <div class="flex items-start" style="gap: 12px;">
+            <span class="custom-accent-text text-lg mt-1">•</span>
+            <p class="custom-text opacity-80 text-lg leading-relaxed">Real-world ROI over proof-of-concept polish</p>
+          </div>
+          <div class="flex items-start" style="gap: 12px;">
+            <span class="custom-accent-text text-lg mt-1">•</span>
+            <p class="custom-text opacity-80 text-lg leading-relaxed">Systems thinking over single models</p>
+          </div>
+          <div class="flex items-start" style="gap: 12px;">
+            <span class="custom-accent-text text-lg mt-1">•</span>
+            <p class="custom-text opacity-80 text-lg leading-relaxed">Partnership over product</p>
+          </div>
         </div>
       </div>
 
@@ -55,12 +67,12 @@
         <hr style="width: 64px; height: 4px; background-color: #EB7300; border: none; margin: 0 auto;" />
       </div>
 
-      <div class="grid lg:grid-cols-2 items-center" style="gap: 80px; margin-bottom: 180px;">
-        <div class="flex justify-center">
-          <%= image_tag "james_headshot.jpeg", alt: "James Wood - Founder & CEO", class: "w-80 h-80 rounded-xl object-cover shadow-lg" %>
+      <div class="grid lg:grid-cols-2 items-center gap-8 lg:gap-20" style="margin-bottom: 180px;">
+        <div class="flex justify-center order-2 lg:order-1">
+          <%= image_tag "james_headshot.jpeg", alt: "James Wood - Founder & CEO", class: "w-64 h-64 lg:w-80 lg:h-80 rounded-xl object-cover shadow-lg" %>
         </div>
 
-        <div class="space-y-6">
+        <div class="space-y-6 order-1 lg:order-2">
           <div>
             <h3 class="text-3xl font-bold custom-text mb-2">James Wood</h3>
             <p class="custom-accent-text font-medium text-xl mb-6">Founder & CEO</p>
@@ -69,7 +81,7 @@
           <p class="custom-text opacity-80 text-lg leading-relaxed" style="margin-bottom: 32px;">
             With over five years immersed in the fast-paced world of startups, James Wood developed a rare, firsthand understanding of how to build and scale businesses from the ground up. During this time, he did not just witness the power of AI, he engineered it. By crafting bespoke AI solutions to streamline operations and enhance efficiency within his own ventures, James gained deep, practical insight into how intelligent systems can unlock competitive advantages. Rather than treat AI as a distant technical domain, James saw its potential as a strategic lever. This vision led him to formally strengthen his technical foundation with a rigorous software development program, further equipping him to speak fluently across both technical and commercial disciplines.
           </p>
-          
+
           <p class="custom-text opacity-80 text-lg leading-relaxed">
              It is this unique dual fluency, merging business acumen with hands-on AI capability, that positioned James at a natural inflection point: the creation of Consilix, a consultancy dedicated to helping businesses harness AI not just for automation, but for real strategic transformation. Where many see a gap between commercial needs and AI implementation, James sees a bridge, one he has spent years building.
         </p></div>
@@ -87,7 +99,7 @@
     <p class="text-lg custom-text opacity-80 mb-8 max-w-2xl mx-auto">
       Ready to transform your operations with intelligent automation? We're here to help you navigate from strategy to successful implementation.
     </p>
-    <%= link_to "Start the Conversation", contact_path, class: "custom-accent text-white px-8 py-3 rounded-lg text-lg font-semibold hover:opacity-90 transition-opacity inline-block" %>
+    <%= link_to "Start a Conversation", contact_path, class: "custom-accent text-white px-8 py-3 rounded-lg text-lg font-semibold hover:opacity-90 transition-opacity inline-block" %>
   </div>
 </section>
 
