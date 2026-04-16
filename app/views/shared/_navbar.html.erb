@@ -1,70 +1,118 @@
-<header class="custom-bg border-b border-gray-800">
-  <nav class="mx-auto px-8 md:px-9 py-6" style="max-width: 1500px;">
-    <div class="flex items-center justify-between">
-      <!-- Logo with image -->
-      <%= link_to root_path, class: "flex items-center space-x-3 hover:no-underline" do %>
-        <%= image_tag "Logo_name_buttercream.png", alt: "Consilix.ai", style: "height: 50px; width: auto;" %>
-      <% end %>
-      
-      <!-- Desktop Navigation and CTA -->
-      <div class="desktop-nav items-center">
-        <div class="flex items-center space-x-8 mr-8">
-          <%= link_to "Home", root_path, class: "custom-text hover:custom-accent-text transition-colors whitespace-nowrap #{'custom-accent-text' if current_page?(root_path)}" %>
-          <%= link_to "Services", services_path, class: "custom-text hover:custom-accent-text transition-colors whitespace-nowrap #{'custom-accent-text' if current_page?(services_path)}" %>
-          <%# <%= link_to "Case Studies", case_studies_path, class: "custom-text hover:custom-accent-text transition-colors whitespace-nowrap" %>
-          <%= link_to "About", about_path, class: "custom-text hover:custom-accent-text transition-colors whitespace-nowrap #{'custom-accent-text' if current_page?(about_path)}" %>
-          <%= link_to "Contact", contact_path, class: "custom-text hover:custom-accent-text transition-colors whitespace-nowrap #{'custom-accent-text' if current_page?(contact_path)}" %>
-        </div>
-        <%= link_to "Start Your AI Journey", contact_path, class: "custom-accent text-white px-8 py-3 rounded-lg hover:opacity-90 transition-opacity font-medium whitespace-nowrap" %>
-      </div>
-      
-      <!-- Mobile menu button -->
-      <button class="mobile-menu-button custom-text" onclick="toggleMobileMenu()">
-        <i class="fas fa-bars text-xl"></i>
-      </button>
+<header class="site-nav">
+  <nav class="wrap nav-inner">
+    <%= link_to root_path, class: "nav-brand", "aria-label": "Consilix, home" do %>
+      <%= image_tag "consilix_wordmark.png", alt: "Consilix", class: "nav-brand-img" %>
+    <% end %>
+
+    <div class="nav-links">
+      <%= link_to "Process",  process_path, class: "nav-link #{'is-active' if current_page?(process_path)}" %>
+      <%= link_to "Work",     work_path,    class: "nav-link #{'is-active' if current_page?(work_path)}" %>
+      <%= link_to "Writing",  writing_path, class: "nav-link #{'is-active' if current_page?(writing_path)}" %>
+      <%= link_to "About",    about_path,   class: "nav-link #{'is-active' if current_page?(about_path)}" %>
     </div>
-    
-    <!-- Mobile menu (hidden by default) -->
-    <div id="mobile-menu" class="hidden mt-4 pb-4" style="display: none;">
-      <div class="flex flex-col space-y-4">
-        <%= link_to "Home", root_path, class: "custom-text hover:custom-accent-text transition-colors py-2 #{'custom-accent-text' if current_page?(root_path)}" %>
-        <%= link_to "Services", services_path, class: "custom-text hover:custom-accent-text transition-colors py-2 #{'custom-accent-text' if current_page?(services_path)}" %>
-        <%# <%= link_to "Case Studies", case_studies_path, class: "custom-text hover:custom-accent-text transition-colors py-2" %>
-        <%= link_to "About", about_path, class: "custom-text hover:custom-accent-text transition-colors py-2 #{'custom-accent-text' if current_page?(about_path)}" %>
-        <%= link_to "Contact", contact_path, class: "custom-text hover:custom-accent-text transition-colors py-2 #{'custom-accent-text' if current_page?(contact_path)}" %>
-        <%= link_to "Start Your AI Journey", contact_path, class: "mt-4 custom-accent text-white px-6 py-3 rounded-lg hover:opacity-90 transition-opacity font-medium text-center inline-block" %>
-      </div>
+
+    <div class="nav-cta-wrap">
+      <%= link_to "Book a call", contact_path, class: "nav-cta" %>
     </div>
+
+    <button class="nav-burger" aria-label="Toggle menu" onclick="toggleMobileMenu()">
+      <span></span><span></span>
+    </button>
   </nav>
+
+  <div id="mobile-menu" class="nav-mobile" hidden>
+    <div class="wrap">
+      <%= link_to "Process",  process_path, class: "nav-mobile-link" %>
+      <%= link_to "Work",     work_path,    class: "nav-mobile-link" %>
+      <%= link_to "Writing",  writing_path, class: "nav-mobile-link" %>
+      <%= link_to "About",    about_path,   class: "nav-mobile-link" %>
+      <%= link_to "Book a call", contact_path, class: "btn btn-primary nav-mobile-cta" %>
+    </div>
+  </div>
 </header>
 
-<script>
-function toggleMobileMenu() {
-  const mobileMenu = document.getElementById('mobile-menu');
-  const hamburger = document.querySelector('.fa-bars, .fa-times');
-  
-  if (mobileMenu.style.display === 'none' || mobileMenu.style.display === '') {
-    mobileMenu.style.display = 'block';
-    hamburger.classList.remove('fa-bars');
-    hamburger.classList.add('fa-times');
-  } else {
-    mobileMenu.style.display = 'none';
-    hamburger.classList.remove('fa-times');
-    hamburger.classList.add('fa-bars');
+<style>
+  .site-nav { background: var(--paper); border-bottom: 1px solid var(--rule); position: sticky; top: 0; z-index: 40; backdrop-filter: saturate(1.1); }
+  .nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; height: 76px; }
+  .nav-brand { display: inline-flex; align-items: center; gap: 8px; }
+  .nav-brand { display: inline-flex; align-items: center; }
+  .nav-brand-img {
+    height: 38px;
+    width: auto;
+    display: block;
+    mix-blend-mode: multiply;
   }
-}
+  @media (max-width: 540px) {
+    .nav-brand-img { height: 32px; }
+  }
+  .nav-links { display: flex; align-items: center; gap: 28px; }
+  .nav-link {
+    font-family: var(--f-body);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    color: var(--ink-mute);
+    transition: color .18s ease;
+    position: relative;
+    padding: 4px 0;
+  }
+  .nav-link:hover { color: var(--ink); }
+  .nav-link.is-active { color: var(--ink); }
+  .nav-link.is-active::after {
+    content: "";
+    position: absolute;
+    left: 0; right: 0; bottom: -6px;
+    height: 1px;
+    background: var(--accent);
+  }
+  .nav-cta {
+    font-family: var(--f-body);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--paper);
+    background: var(--ink);
+    padding: 10px 16px;
+    border-radius: 2px;
+    transition: background .18s ease;
+    white-space: nowrap;
+  }
+  .nav-cta:hover { background: var(--accent); }
 
-// Close mobile menu when clicking on a link
-document.addEventListener('DOMContentLoaded', function() {
-  const mobileMenuLinks = document.querySelectorAll('#mobile-menu a');
-  mobileMenuLinks.forEach(link => {
-    link.addEventListener('click', function() {
-      const mobileMenu = document.getElementById('mobile-menu');
-      const hamburger = document.querySelector('.fa-bars, .fa-times');
-      mobileMenu.style.display = 'none';
-      hamburger.classList.remove('fa-times');
-      hamburger.classList.add('fa-bars');
+  .nav-burger { display: none; background: none; border: 0; width: 40px; height: 40px; padding: 10px; cursor: pointer; }
+  .nav-burger span { display: block; width: 100%; height: 1px; background: var(--ink); margin: 5px 0; transition: transform .2s ease; }
+
+  .nav-mobile { border-top: 1px solid var(--rule); padding: 16px 0 28px; background: var(--paper); }
+  .nav-mobile[hidden] { display: none; }
+  .nav-mobile .wrap { display: grid; gap: 14px; }
+  .nav-mobile-link {
+    font-family: var(--f-display);
+    font-style: normal;
+    font-size: 24px;
+    color: var(--ink);
+    padding: 10px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .nav-mobile-cta { justify-self: start; margin-top: 10px; }
+
+  @media (max-width: 880px) {
+    .nav-links { display: none; }
+    .nav-cta-wrap { display: none; }
+    .nav-burger { display: inline-flex; flex-direction: column; align-items: center; justify-content: center; }
+  }
+</style>
+
+<script>
+  function toggleMobileMenu() {
+    const m = document.getElementById('mobile-menu');
+    if (!m) return;
+    if (m.hasAttribute('hidden')) m.removeAttribute('hidden'); else m.setAttribute('hidden', '');
+  }
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('#mobile-menu a').forEach(a => {
+      a.addEventListener('click', () => {
+        const m = document.getElementById('mobile-menu');
+        if (m) m.setAttribute('hidden', '');
+      });
     });
   });
-});
 </script>

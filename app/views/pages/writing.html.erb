@@ -1,0 +1,118 @@
+<%# ─────────────────────────────── HERO ─────────────────────────────── %>
+<section class="section surface">
+  <div class="wrap-narrow">
+    <span class="kicker">Field notes</span>
+    <h1 class="h1" style="margin: 20px 0 28px;">
+      Short writing from the client work.
+    </h1>
+    <p class="lede">
+      Not a blog. These are notes from inside live engagements: the arguments worth having, the things we have found out the hard way and the frameworks that actually hold up in front of a real team. Published when there&rsquo;s something worth saying and not before.
+    </p>
+  </div>
+</section>
+
+<%# ─────────────────────────── NOTES LIST ─────────────────────────── %>
+<section class="section surface-alt rule-top">
+  <div class="wrap-narrow">
+    <div class="notes-list">
+      <% @posts.each do |post| %>
+        <%= link_to writing_post_path(slug: post[:slug]), class: "note-full" do %>
+          <div class="note-date mono"><%= post[:date_display] %></div>
+          <div class="note-body">
+            <h2 class="note-title-lg"><%= post[:title] %></h2>
+            <p class="note-dek"><%= post[:dek] %></p>
+            <div class="note-tags">
+              <% post[:tags].each do |tag| %>
+                <span class="sector-chip"><%= tag %></span>
+              <% end %>
+            </div>
+          </div>
+          <div class="note-arrow-wrap">
+            <span class="note-arrow-lg" aria-hidden="true">→</span>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+
+    <div class="notes-footnote">
+      <p class="prose">
+        More notes in the pipeline. If you want to be told when the next one goes up, email <a class="link-text" href="mailto:hello@consilix.ai">hello@consilix.ai</a> with the subject line <em>&ldquo;notes&rdquo;</em> and I&rsquo;ll add you to a plain-text list.
+      </p>
+    </div>
+  </div>
+</section>
+
+<%# ─────────────────────────── CTA ─────────────────────────── %>
+<section class="section surface rule-top">
+  <div class="wrap-narrow center">
+    <span class="kicker" style="justify-content: center;">Rather talk than read?</span>
+    <h2 class="h2" style="margin: 18px auto 16px; max-width: 22ch;">
+      Book a call.
+    </h2>
+    <p class="lede" style="margin: 0 auto 36px;">
+      Thirty minutes. No pitch. Bring the part of the business you most wish was running itself.
+    </p>
+    <%= link_to contact_path, class: "btn btn-primary" do %>
+      Book a call <span class="arrow" aria-hidden="true">→</span>
+    <% end %>
+  </div>
+</section>
+
+<style>
+  a.note-full { display: grid; text-decoration: none; }
+  .note-full {
+    grid-template-columns: 140px 1fr 40px;
+    gap: clamp(16px, 2vw, 40px);
+    align-items: start;
+    padding: clamp(28px, 3vw, 40px) 0;
+    border-top: 1px solid var(--rule);
+    transition: background .18s ease, padding .18s ease;
+  }
+  .note-full:last-of-type { border-bottom: 1px solid var(--rule); }
+  .note-full:hover { background: var(--paper-3); padding-left: 12px; padding-right: 12px; }
+  .note-date {
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    color: var(--ink-faint);
+    text-transform: uppercase;
+    padding-top: 8px;
+  }
+  .note-title-lg {
+    font-family: var(--f-display);
+    font-style: normal;
+    font-weight: 500;
+    font-size: clamp(24px, 2.4vw, 32px);
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    margin: 0 0 10px;
+  }
+  .note-dek { font-size: 15px; line-height: 1.6; color: var(--ink-mute); max-width: 56ch; margin: 0; }
+  .note-tags { margin-top: 16px; display: flex; gap: 8px; flex-wrap: wrap; }
+  .note-arrow-wrap { align-self: center; text-align: right; }
+  .note-arrow-lg {
+    font-family: var(--f-body);
+    font-size: 24px;
+    color: var(--ink-faint);
+    transition: color .18s ease, transform .18s ease;
+  }
+  .note-full:hover .note-arrow-lg { color: var(--accent); transform: translateX(4px); }
+
+  .notes-footnote { margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--rule); }
+  .notes-footnote .prose p { max-width: 56ch; color: var(--ink-mute); font-size: 15px; }
+
+  .sector-chip {
+    font-family: var(--f-body);
+    font-size: 12px;
+    color: var(--ink-2);
+    padding: 4px 10px;
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    background: var(--paper);
+  }
+
+  @media (max-width: 720px) {
+    .note-full { grid-template-columns: 1fr; }
+    .note-arrow-wrap { display: none; }
+  }
+</style>

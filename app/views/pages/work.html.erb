@@ -1,0 +1,237 @@
+<%# ─────────────────────────────── HERO ─────────────────────────────── %>
+<section class="section surface">
+  <div class="wrap-narrow">
+    <span class="kicker">Selected work</span>
+    <h1 class="h1" style="margin: 20px 0 28px;">
+      Real builds, in production. <em>No demos.</em>
+    </h1>
+    <p class="lede">
+      Every engagement below is a working system. Client identities are kept private by default. The work shown here is anonymised at the sector level. Named references are available on request under NDA.
+    </p>
+  </div>
+</section>
+
+<%# ─────────────────────────── FILTER / SECTOR STRIP ─────────────────────────── %>
+<section class="section-sm surface-alt rule-top rule-bottom">
+  <div class="wrap">
+    <div class="sector-strip">
+      <span class="meta">Sectors worked in</span>
+      <span class="sector-chip">Prediction markets</span>
+      <span class="sector-chip">Sports &amp; talent</span>
+      <span class="sector-chip">Finance &amp; accounting</span>
+      <span class="sector-chip">Luxury hospitality</span>
+    </div>
+  </div>
+</section>
+
+<%# ─────────────────────────── CASE 01 — PREDICTION MARKETS ─────────────────────────── %>
+<section class="section surface">
+  <div class="wrap">
+    <article class="work-row">
+      <div class="work-side">
+        <div class="sec-head" style="margin-bottom: 24px; padding-bottom: 14px;">
+          <div class="num">01</div>
+          <div class="head-body">
+            <span class="kicker">Prediction markets, finance</span>
+            <div class="meta" style="margin-top: 6px;">Private client, ongoing</div>
+          </div>
+        </div>
+      </div>
+      <div class="work-main">
+        <h2 class="h2" style="margin-bottom: 20px;">An AI trading system running live across thousands of prediction markets.</h2>
+        <div class="prose">
+          <p>A manual trader on a prediction-markets platform cannot watch five thousand markets at once. Mispricings close before a human can even notice them. The client needed a system that did the watching, the research and the execution continuously, with enough discipline to stay out of bad trades.</p>
+          <p>We built a multi-stage architecture: heuristic screening that filters thousands of live markets to the top candidates in under a second; a research layer that pulls news, RSS feeds and live web data to assess the fundamentals; an arbitrage and confidence engine that gates execution; and a live trader with Kelly-sized position management. All of it is test-backed, incrementally shipped and still being extended.</p>
+        </div>
+        <div class="work-metrics">
+          <div class="work-metric">
+            <div class="metric">1,842<span class="metric-unit"> tests</span></div>
+            <div class="meta">Passing, continuously run</div>
+          </div>
+          <div class="work-metric">
+            <div class="metric">137<span class="metric-unit"> phases</span></div>
+            <div class="meta">Incrementally shipped</div>
+          </div>
+          <div class="work-metric">
+            <div class="metric">&lt;1<span class="metric-unit">s</span></div>
+            <div class="meta">4,800 markets filtered to top candidates</div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<%# ─────────────────────────── CASE 02 — SPORTS / TALENT AGENCY ─────────────────────────── %>
+<section class="section surface-alt rule-top">
+  <div class="wrap">
+    <article class="work-row">
+      <div class="work-side">
+        <div class="sec-head" style="margin-bottom: 24px; padding-bottom: 14px;">
+          <div class="num">02</div>
+          <div class="head-body">
+            <span class="kicker">Sports and talent, agency</span>
+            <div class="meta" style="margin-top: 6px;">Private client, 2026</div>
+          </div>
+        </div>
+      </div>
+      <div class="work-main">
+        <h2 class="h2" style="margin-bottom: 20px;">An AI intelligence layer that reads the agency's inbox and surfaces partnership opportunities.</h2>
+        <div class="prose">
+          <p>Agents inside a sports and talent firm were manually scanning emails, shared drives and news for partnership signals. They missed relationships. They wasted hours on data entry. The senior people were doing the junior work.</p>
+          <p>We built a SaaS that ingests email and shared documents nightly, extracts the entities that matter (athletes, brands, relationships, commercial signals), and feeds a daily recommendation surface. A chat agent answers questions against the full knowledge base. A weekly strategic roundup turns the week of signal into a short themed brief. The team reads the system before they read their inbox.</p>
+        </div>
+        <div class="work-metrics">
+          <div class="work-metric">
+            <div class="metric">Nightly</div>
+            <div class="meta">Inbox and drive ingest</div>
+          </div>
+          <div class="work-metric">
+            <div class="metric">156<span class="metric-unit"> specs</span></div>
+            <div class="meta">Request-level test coverage</div>
+          </div>
+          <div class="work-metric">
+            <div class="metric">7<span class="metric-unit"> tools</span></div>
+            <div class="meta">Agent-accessible knowledge-base actions</div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<%# ─────────────────────────── CASE 03 — FINANCE / ACCOUNTING ─────────────────────────── %>
+<section class="section surface rule-top">
+  <div class="wrap">
+    <article class="work-row">
+      <div class="work-side">
+        <div class="sec-head" style="margin-bottom: 24px; padding-bottom: 14px;">
+          <div class="num">03</div>
+          <div class="head-body">
+            <span class="kicker">Finance and accounting, SME</span>
+            <div class="meta" style="margin-top: 6px;">Private client, 2026</div>
+          </div>
+        </div>
+      </div>
+      <div class="work-main">
+        <h2 class="h2" style="margin-bottom: 20px;">A monthly auto-invoicing bridge that removed the end-of-month admin from a small business.</h2>
+        <div class="prose">
+          <p>A small consultancy was spending two to three hours every month turning a time-tracking tool into Xero invoices. Manual, repetitive, error-prone and the one thing standing between the work and getting paid.</p>
+          <p>We built a bridge that polls the time-tracking API, maps entries to Xero contacts using a rate card, generates draft invoices with attached timesheets, triggers on a fixed cron or on demand, and sends a WhatsApp summary with approve, hold or reject buttons. On approval the invoice authorises and sends automatically. The monthly job now takes a thumb tap.</p>
+        </div>
+        <div class="work-metrics">
+          <div class="work-metric">
+            <div class="metric">Hours<span class="metric-unit"> → seconds</span></div>
+            <div class="meta">Monthly invoicing effort</div>
+          </div>
+          <div class="work-metric">
+            <div class="metric">20<span class="metric-unit">/20</span></div>
+            <div class="meta">Requirements shipped to v1</div>
+          </div>
+          <div class="work-metric">
+            <div class="metric">Live</div>
+            <div class="meta">Running continuously since launch</div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<%# ─────────────────────────── CASE 04 — LUXURY HOSPITALITY ─────────────────────────── %>
+<section class="section surface-alt rule-top">
+  <div class="wrap">
+    <article class="work-row">
+      <div class="work-side">
+        <div class="sec-head" style="margin-bottom: 24px; padding-bottom: 14px;">
+          <div class="num">04</div>
+          <div class="head-body">
+            <span class="kicker">Luxury hospitality, boutique</span>
+            <div class="meta" style="margin-top: 6px;">Private client, 2025</div>
+          </div>
+        </div>
+      </div>
+      <div class="work-main">
+        <h2 class="h2" style="margin-bottom: 20px;">A branded quote engine and email automation layer that unbottlenecked the founder.</h2>
+        <div class="prose">
+          <p>A luxury hospitality business was bottlenecked on its founder. Every quote was being assembled by hand from supplier emails, PDFs and spreadsheets. Every follow-up was being written from scratch. Most of the week went into work that should not have needed a human at all.</p>
+          <p>We built two systems that sit behind a single admin. The quote engine ingests raw supplier data, applies the firm's pricing and margin rules and produces a brand-consistent proposal in the founder's tone of voice. The email automation layer reads incoming enquiries, drafts tailored responses against the firm's style and follows up at the right cadence. The founder reviews and sends; the system does the rest.</p>
+        </div>
+        <div class="work-metrics">
+          <div class="work-metric">
+            <div class="metric">Days<span class="metric-unit"> → hours</span></div>
+            <div class="meta">Quote turnaround</div>
+          </div>
+          <div class="work-metric">
+            <div class="metric">100<span class="metric-unit">%</span></div>
+            <div class="meta">Brand-consistent output</div>
+          </div>
+          <div class="work-metric">
+            <div class="metric">1<span class="metric-unit"> admin</span></div>
+            <div class="meta">Quoting plus follow-up, same pane</div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<%# ─────────────────────────── CTA ─────────────────────────── %>
+<section class="section surface-ink rule-top">
+  <div class="wrap-narrow center">
+    <span class="kicker" style="color: var(--paper); justify-content: center;">Want a build like these?</span>
+    <h2 class="h2" style="margin: 18px auto 16px; color: var(--paper);">
+      Start with a conversation.
+    </h2>
+    <p class="lede" style="margin: 0 auto 36px; color: rgba(245,240,232,0.78);">
+      Thirty minutes. No pitch. Bring the part of the business you most wish was running itself.
+    </p>
+    <%= link_to contact_path, class: "btn btn-primary", style: "background: var(--paper); color: var(--ink);" do %>
+      Book a call <span class="arrow" aria-hidden="true">→</span>
+    <% end %>
+  </div>
+</section>
+
+<style>
+  .sector-strip {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 14px;
+  }
+  .sector-chip {
+    font-family: var(--f-body);
+    font-size: 13px;
+    color: var(--ink-2);
+    padding: 6px 12px;
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    background: var(--paper);
+  }
+
+  .work-row {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: clamp(24px, 4vw, 56px);
+    align-items: start;
+  }
+  .work-side .sec-head { border-bottom: 1px solid var(--rule); }
+  .work-main .prose p { max-width: 60ch; }
+  .work-metrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(16px, 2vw, 32px);
+    margin-top: 28px;
+    padding-top: 24px;
+    border-top: 1px solid var(--rule);
+  }
+  .work-metric .metric { font-size: clamp(36px, 3.6vw, 48px); }
+
+  @media (max-width: 880px) {
+    .work-row { grid-template-columns: 1fr; }
+    .work-metrics { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 540px) {
+    .work-metrics { grid-template-columns: 1fr; }
+  }
+</style>

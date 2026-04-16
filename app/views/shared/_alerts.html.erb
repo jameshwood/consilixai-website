@@ -1,9 +1,6 @@
-<% if notice || alert %>
-  <div role="alert" class="alert fixed bottom-0 left-0 w-6/12 m-4 bg-base-100 text-accent shadow-lg rounded-box z-50">
-    <%= lucide_icon("message-circle-warning") %>
-    <span><%= notice %> <%= alert %></span>
-      <form method="dialog">
-        <%# Add a button to close the dialog %>
-      </form>
-  </div>
+<% if notice %>
+  <div role="status" class="flash"><%= notice %></div>
+<% end %>
+<% if alert %>
+  <div role="alert" class="flash flash-alert"><%= alert %></div>
 <% end %>

@@ -1,76 +1,55 @@
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy</title>
-</head>
-<body class="font-sans">
-  <div class="max-w-4xl mx-auto py-12 px-6 sm:px-8 lg:px-12 shadow-lg rounded-lg my-6">
-    <h1 class="text-4xl font-bold mb-8 text-center ">Privacy Policy</h1>
-
-    <p class="text-sm  mb-12 text-center">Last Updated: [Date]</p>
-
-    <div class="space-y-8">
-      <section>
-        <h2 class="text-2xl font-semibold mb-4 ">1. Introduction</h2>
-        <p class=" leading-relaxed">
-          <%= DEFAULT_META["meta_product_name"] %> ("we", "us", or "our") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and disclose your information when you use <%= DEFAULT_META["meta_product_name"] %> (the "Service").
-          By using the Service, you agree to the collection and use of information in accordance with this policy.
-        </p>
-      </section>
-
-      <section>
-        <h2 class="text-2xl font-semibold mb-4 ">2. Information We Collect</h2>
-        <p class=" leading-relaxed">
-          We collect various types of information in connection with the Service, including:
-        </p>
-        <ul class="list-disc list-inside  leading-relaxed ml-4">
-          <li><strong>Personal Information:</strong> Such as your name, email address, billing address, and payment details when you register or make a purchase.</li>
-          <li><strong>Usage Data:</strong> Information on how you access and use the Service, including your IP address, browser type, and device information.</li>
-          <li><strong>Cookies and Tracking Data:</strong> We use cookies and similar tracking technologies to track activity on our Service and hold certain information.</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2 class="text-2xl font-semibold mb-4 ">3. How We Use Your Information</h2>
-        <p class=" leading-relaxed">
-          <%= DEFAULT_META["meta_product_name"] %> uses the collected data for various purposes, including:
-        </p>
-        <ul class="list-disc list-inside  leading-relaxed ml-4">
-          <li>To provide and maintain the Service</li>
-          <li>To process transactions and manage your account</li>
-          <li>To improve and personalize your experience with the Service</li>
-          <li>To communicate with you about updates, promotions, and other news related to the Service</li>
-          <li>To detect, prevent, and address technical issues or security threats</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2 class="text-2xl font-semibold mb-4 ">4. Sharing of Information</h2>
-        <p class=" leading-relaxed">
-          We do not sell, trade, or otherwise transfer your personal information to third parties except in the following circumstances:
-        </p>
-        <ul class="list-disc list-inside  leading-relaxed ml-4">
-          <li>With service providers who assist us in operating our Service or conducting our business, so long as those parties agree to keep this information confidential</li>
-          <li>When required by law or in response to valid requests by public authorities</li>
-          <li>To protect and defend the rights or property of <%= DEFAULT_META["meta_product_name"] %></li>
-          <li>In connection with a merger, acquisition, or sale of all or a portion of our assets</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2 class="text-2xl font-semibold mb-4 ">5. Security of Your Information</h2>
-        <p class=" leading-relaxed">
-          The security of your personal information is important to us. We implement appropriate technical and organizational measures to protect your information against unauthorized access, alteration, disclosure, or destruction.
-          However, please be aware that no method of transmission over the internet or method of electronic storage is 100% secure, and we cannot guarantee its absolute security.
-        </p>
-      </section>
-
-      <section>
-        <h2 class="text-2xl font-semibold mb-4 ">6. Data Retention</h2>
-        <p class=" leading-relaxed">
-          We will retain your personal information only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use your information to the extent necessary to comply with our legal obligations, resolve disputes, and enforce our policies.
-        </p>
-      </section>
-    </div>
+<section class="section surface">
+  <div class="wrap-narrow">
+    <span class="kicker">Legal</span>
+    <h1 class="h1" style="margin: 20px 0 16px;">Privacy policy.</h1>
+    <p class="meta">Last updated: <%= Date.today.strftime('%B %Y') %></p>
   </div>
-</body>
+</section>
+
+<section class="section-sm surface-alt rule-top rule-bottom">
+  <div class="wrap-narrow legal-prose">
+
+    <h2 class="h2">1. Introduction</h2>
+    <p>Consilix Ltd (&ldquo;we&rdquo;, &ldquo;us&rdquo;, or &ldquo;our&rdquo;) is committed to protecting your privacy. This policy explains how we collect, use and disclose information when you interact with <strong>consilix.ai</strong> or engage us commercially.</p>
+
+    <h2 class="h2">2. Information we collect</h2>
+    <ul>
+      <li><strong>Contact details</strong> you submit via the contact form or by email (name, email address, company, message).</li>
+      <li><strong>Engagement information</strong> shared during an audit, build, or retainer &mdash; limited to what is necessary to deliver the work.</li>
+      <li><strong>Website usage data</strong>: standard server logs (IP address, browser type, page requested, referrer) retained for a short window for operational and security purposes.</li>
+    </ul>
+
+    <h2 class="h2">3. How we use your information</h2>
+    <ul>
+      <li>To respond to enquiries and schedule calls.</li>
+      <li>To deliver the engagement you have commissioned.</li>
+      <li>To keep our systems secure and detect abuse.</li>
+      <li>To meet our legal and tax obligations in the UK.</li>
+    </ul>
+    <p>We do not sell, rent, or trade your information. We do not run marketing automation against visitors who submit the contact form.</p>
+
+    <h2 class="h2">4. Sharing of information</h2>
+    <p>Information is shared only with sub-processors we rely on to operate &mdash; our email provider, the calendar service used for bookings and standard infrastructure (hosting, backup, DNS). A full list is available on request.</p>
+
+    <h2 class="h2">5. Security</h2>
+    <p>We apply appropriate technical and organisational measures &mdash; encrypted transport, access-restricted storage, least-privilege credentials. No internet service is 100% secure, but we aim for a standard commensurate with the sensitivity of the data we hold.</p>
+
+    <h2 class="h2">6. Data retention</h2>
+    <p>Contact-form submissions are kept for as long as the conversation is active and for a reasonable follow-up window after. Engagement records are retained in line with UK tax and accounting requirements.</p>
+
+    <h2 class="h2">7. Your rights</h2>
+    <p>Under UK GDPR you have rights to access, correct, delete, or restrict the use of your personal data and to object to certain processing. To exercise any of these, email <a class="link-text" href="mailto:hello@consilix.ai">hello@consilix.ai</a>.</p>
+
+    <h2 class="h2">8. Contact</h2>
+    <p>Questions about this policy: <a class="link-text" href="mailto:hello@consilix.ai">hello@consilix.ai</a>.</p>
+  </div>
+</section>
+
+<style>
+  .legal-prose h2 { margin: 40px 0 14px; }
+  .legal-prose h2:first-of-type { margin-top: 0; }
+  .legal-prose p { max-width: 64ch; margin: 0 0 16px; font-size: 16px; line-height: 1.65; color: var(--ink-2); }
+  .legal-prose ul { margin: 0 0 16px 1.2em; padding: 0; }
+  .legal-prose li { font-size: 16px; line-height: 1.65; color: var(--ink-2); margin-bottom: 8px; max-width: 64ch; }
+  .legal-prose strong { color: var(--ink); }
+</style>

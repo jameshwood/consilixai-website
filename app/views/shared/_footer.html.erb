@@ -1,50 +1,82 @@
-<footer class="custom-bg border-t border-gray-800 py-12">
-  <div class="mx-auto px-8 md:px-9" style="max-width: 1500px;">
-    <div class="flex flex-wrap justify-between gap-8">
-      <!-- Logo and description -->
-      <div class="space-y-4" style="max-width: 200px;">
-        <%= link_to root_path, class: "flex items-center hover:no-underline" do %>
-          <%= image_tag "Logo_name_buttercream.png", alt: "Consilix.ai", style: "height: 50px; width: auto;" %>
-        <% end %>
-      </div>
-
-      <!-- Policies -->
-      <div class="space-y-4">
-        <h4 class="font-semibold custom-text">Policies</h4>
-        <div class="space-y-2">
-          <%= link_to "Privacy Policy", "#", class: "block custom-text opacity-60 hover:custom-accent-text hover:opacity-100 transition-all" %>
-          <%= link_to "Terms of Service", "#", class: "block custom-text opacity-60 hover:custom-accent-text hover:opacity-100 transition-all" %>
-          <%= link_to "Cookie Policy", "#", class: "block custom-text opacity-60 hover:custom-accent-text hover:opacity-100 transition-all" %>
-        </div>
-      </div>
-
-      <!-- Company -->
-      <div class="space-y-4">
-        <h4 class="font-semibold custom-text">Company</h4>
-        <div class="space-y-2">
-          <%= link_to "About Us", about_path, class: "block custom-text opacity-60 hover:custom-accent-text hover:opacity-100 transition-all" %>
-          <%# <%= link_to "Case Studies", case_studies_path, class: "block custom-text opacity-60 hover:opacity-100 transition-opacity" %>
-          <%= link_to "Contact", contact_path, class: "block custom-text opacity-60 hover:custom-accent-text hover:opacity-100 transition-all" %>
-        </div>
-      </div>
-
-      <!-- Connect -->
-      <div class="space-y-4">
-        <h4 class="font-semibold custom-text">Connect</h4>
-        <div class="flex" style="gap: 24px;">
-          <a href="#" class="custom-text opacity-60 hover:custom-accent-text hover:opacity-100 transition-all">
-            <i class="fab fa-linkedin text-2xl"></i>
-          </a>
-          <a href="#" class="custom-text opacity-60 hover:custom-accent-text hover:opacity-100 transition-all">
-            <i class="fab fa-github text-2xl"></i>
-          </a>
-        </div>
-      </div>
+<footer class="site-foot rule-top">
+  <div class="wrap foot-inner">
+    <div class="foot-col foot-brand">
+      <%= image_tag "consilix_wordmark.png", alt: "Consilix", class: "foot-mark-img" %>
+      <p class="foot-note">A fractional AI and automation team for operations-heavy firms. London, UK.</p>
+      <a href="mailto:hello@consilix.ai" class="foot-email">hello@consilix.ai</a>
     </div>
 
-    <!-- Copyright -->
-    <div class="border-t border-gray-800 mt-8 pt-8 text-center">
-      <p class="custom-text opacity-60">© 2024 Consilix.ai. All rights reserved.</p>
+    <div class="foot-col">
+      <div class="meta foot-heading">Company</div>
+      <%= link_to "Process",   process_path, class: "foot-link" %>
+      <%= link_to "Work",      work_path,    class: "foot-link" %>
+      <%= link_to "Writing",   writing_path, class: "foot-link" %>
+      <%= link_to "About",     about_path,   class: "foot-link" %>
+      <%= link_to "Contact",   contact_path, class: "foot-link" %>
+    </div>
+
+    <div class="foot-col">
+      <div class="meta foot-heading">Legal</div>
+      <%= link_to "Privacy",   privacy_policy_path,       class: "foot-link" %>
+      <%= link_to "Terms",     terms_and_conditions_path, class: "foot-link" %>
+      <%= link_to "Cookies",   cookies_path,              class: "foot-link" %>
+    </div>
+
+    <div class="foot-col">
+      <div class="meta foot-heading">Registered</div>
+      <div class="foot-reg">Consilix Ltd</div>
+      <div class="foot-reg faint">Companies House no. 16584480</div>
     </div>
   </div>
+
+  <div class="wrap foot-base">
+    <div class="foot-copy">© <%= Date.today.year %> Consilix Ltd</div>
+    <div class="foot-copy faint">Built in London. No agents were harmed.</div>
+  </div>
 </footer>
+
+<style>
+  .site-foot { background: var(--paper-2); padding: clamp(56px, 6vw, 80px) 0 24px; }
+  .foot-inner {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+    gap: clamp(24px, 3vw, 48px);
+    padding-bottom: clamp(40px, 4vw, 56px);
+    border-bottom: 1px solid var(--rule);
+  }
+  .foot-col { display: grid; gap: 10px; align-content: start; }
+  .foot-mark-img {
+    height: 40px;
+    width: auto;
+    display: block;
+    margin-bottom: 14px;
+    mix-blend-mode: multiply;
+  }
+  .foot-note { font-size: 14px; color: var(--ink-mute); max-width: 36ch; line-height: 1.55; margin: 0; }
+  .foot-email {
+    margin-top: 12px;
+    font-family: var(--f-body);
+    font-size: 14px;
+    color: var(--ink);
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 2px;
+    align-self: start;
+    transition: color .18s ease, border-color .18s ease;
+  }
+  .foot-email:hover { color: var(--accent); border-bottom-color: var(--accent); }
+  .foot-heading { margin-bottom: 6px; }
+  .foot-link { font-size: 14px; color: var(--ink-2); padding: 2px 0; transition: color .18s ease; }
+  .foot-link:hover { color: var(--accent); }
+  .foot-reg { font-size: 13px; color: var(--ink-2); }
+  .foot-reg.faint { color: var(--ink-faint); }
+  .foot-base { display: flex; justify-content: space-between; align-items: center; padding: 20px 0 0; flex-wrap: wrap; gap: 8px; }
+  .foot-copy { font-family: var(--f-body); font-size: 12px; color: var(--ink-mute); letter-spacing: 0.04em; }
+  .foot-copy.faint { color: var(--ink-faint); }
+
+  @media (max-width: 880px) {
+    .foot-inner { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 540px) {
+    .foot-inner { grid-template-columns: 1fr; }
+  }
+</style>

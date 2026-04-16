@@ -1,289 +1,284 @@
-<!-- Hero Section -->
-<main class="custom-bg">
-  <section class="mx-auto px-6 md:px-8 lg:px-9 pt-16 lg:pt-24 lg:h-[600px] lg:flex lg:items-center" style="max-width: 1350px;">
-    <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-      <div class="space-y-8">
-        <h1 class="text-5xl lg:text-6xl font-bold custom-text leading-tight">
-          AI Strategy Meets Real-World Execution
-        </h1>
-        <p class="text-xl custom-text opacity-80 leading-relaxed">
-          Transform your business with strategic AI implementation that delivers measurable results and sustainable growth.
-        </p>
-        <%= link_to "Start a Conversation", contact_path, class: "custom-accent text-white px-8 py-3 rounded-lg text-lg font-semibold hover:opacity-90 transition-opacity inline-block" %>
-      </div>
-      <div class="flex justify-center mt-16 lg:mt-0">
-        <div class="w-80 h-80 relative overflow-hidden">
-          <!-- 3D Brain Model Container -->
-          <div id="brain-model-container" class="w-full h-full relative z-10"></div>
-          <!-- Pulsating orange circle fallback -->
-          <div id="brain-fallback" class="absolute inset-0 flex items-center justify-center z-0" style="display: block;">
-            <div style="width: 280px; height: 280px;" class="custom-accent rounded-full flex items-center justify-center pulsate-circle">
-              <i class="fas fa-brain text-6xl text-white"></i>
-            </div>
-          </div>
-        </div>
-      </div>
+<%# ─────────────────────────────── HERO ─────────────────────────────── %>
+<section class="section surface">
+  <div class="wrap">
+    <div class="hero-kicker">
+      <span class="kicker">For operations-heavy firms that are AI-late</span>
     </div>
-  </section>
-</main>
-
-
-
-<!-- Why Work With Us Section -->
-<section class="custom-bg pt-20">
-  <div class="mx-auto px-4 md:px-8 lg:px-9" style="max-width: 1500px;">
-    <div class="text-center" style="margin-bottom: 70px;">
-      <h2 class="text-4xl font-bold custom-text mb-6">Why Work With Us</h2>
-      <hr style="width: 64px; height: 4px; background-color: #EB7300; border: none; margin: 0 auto 32px auto;" />
-      <p class="text-xl custom-text opacity-80">Four pillars of our AI consultancy approach</p>
-    </div>
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-20 md:gap-8" style="margin-bottom: 180px;">
-      <div class="text-center space-y-6 mb-12 md:mb-0">
-        <div class="w-12 h-12 mx-auto">
-          <i class="fas fa-rocket text-4xl custom-accent-text"></i>
-        </div>
-        <h3 class="text-2xl font-semibold custom-text">Efficiency</h3>
-        <p class="custom-text opacity-80">Streamlined processes that maximize ROI</p>
-      </div>
-      <div class="text-center space-y-6 mb-12 md:mb-0">
-        <div class="w-12 h-12 mx-auto">
-          <i class="fas fa-lightbulb text-4xl custom-accent-text"></i>
-        </div>
-        <h3 class="text-2xl font-semibold custom-text">Innovation</h3>
-        <p class="custom-text opacity-80">Cutting-edge solutions for tomorrow's challenges</p>
-      </div>
-      <div class="text-center space-y-6 mb-12 md:mb-0">
-        <div class="w-12 h-12 mx-auto">
-          <i class="fas fa-shield-alt text-4xl custom-accent-text"></i>
-        </div>
-        <h3 class="text-2xl font-semibold custom-text">Trust</h3>
-        <p class="custom-text opacity-80">Secure, reliable AI implementations</p>
-      </div>
-      <div class="text-center space-y-6 mb-12 md:mb-0">
-        <div class="w-12 h-12 mx-auto">
-          <i class="fas fa-chart-line text-4xl custom-accent-text"></i>
-        </div>
-        <h3 class="text-2xl font-semibold custom-text">Results</h3>
-        <p class="custom-text opacity-80">Measurable outcomes that drive growth</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- Success Stories Section -->
-<section class="custom-bg pt-20">
-  <div class="mx-auto px-4 md:px-8 lg:px-9" style="max-width: 1500px;">
-    <div class="text-center" style="margin-bottom: 70px;">
-      <h2 class="text-4xl font-bold custom-text mb-6">Working Examples</h2>
-      <hr style="width: 64px; height: 4px; background-color: #EB7300; border: none; margin: 0 auto 32px auto;" />
-      <p class="text-xl custom-text opacity-80">Real examples of our AI implementations</p>
-    </div>
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" style="margin-bottom: 180px;">
-      <div class="rounded-xl border border-gray-700 hover:border-gray-600 transition-all hover:transform hover:scale-105" style="padding: 40px 40px 32px 40px;">
-        <div class="flex flex-col h-full">
-          <div class="w-12 h-12 custom-accent rounded-lg flex items-center justify-center mb-4">
-            <i class="fas fa-chart-bar text-white text-xl"></i>
-          </div>
-          <h3 class="text-2xl font-semibold custom-text mb-3">Compliance Efficiency</h3>
-          <p class="custom-text opacity-80 flex-grow">Custom AI compliance agents for managing internal compliance practices and policy document generation.</p>
-          <%# <%= link_to "Read Case Study →", case_studies_path, class: "text-sm custom-accent-text font-medium mt-6" %>
-        </div>
-      </div>
-      <div class="rounded-xl border border-gray-700 hover:border-gray-600 transition-all hover:transform hover:scale-105" style="padding: 40px 40px 32px 40px;">
-        <div class="flex flex-col h-full">
-          <div class="w-12 h-12 custom-accent rounded-lg flex items-center justify-center mb-4">
-            <i class="fas fa-users text-white text-xl"></i>
-          </div>
-          <h3 class="text-2xl font-semibold custom-text mb-3">Marketing Efficiency</h3>
-          <p class="custom-text opacity-80 flex-grow">Automated tailored content creation and scheduling for Linkedin and other socials removing the need for large marketing teams.</p>
-          <%# <%= link_to "Read Case Study →", case_studies_path, class: "text-sm custom-accent-text font-medium mt-6" %>
-        </div>
-      </div>
-      <div class="rounded-xl border border-gray-700 hover:border-gray-600 transition-all hover:transform hover:scale-105" style="padding: 40px 40px 32px 40px;">
-        <div class="flex flex-col h-full">
-          <div class="w-12 h-12 custom-accent rounded-lg flex items-center justify-center mb-4">
-            <i class="fas fa-brain text-white text-xl"></i>
-          </div>
-          <h3 class="text-2xl font-semibold custom-text mb-3">Operations Efficiency</h3>
-          <p class="custom-text opacity-80 flex-grow">Automated operational processes with custom AI workflows that bring in excess of 60% efficiency gains.</p>
-          <%# <%= link_to "Read Case Study →", case_studies_path, class: "text-sm custom-accent-text font-medium mt-6" %>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA Section -->
-<section class="custom-bg pt-20" style="margin-bottom: 180px;">
-  <div class="max-w-4xl mx-auto px-4 md:px-8 text-center">
-    <h2 class="text-4xl font-bold custom-text mb-6">Ready to Transform Your Business?</h2>
-    <hr style="width: 64px; height: 4px; background-color: #EB7300; border: none; margin: 0 auto 32px auto;" />
-    <p class="text-xl custom-text opacity-80 mb-8">
-      Let's discuss how AI can drive your next phase of growth and start a conversation today.
+    <h1 class="h1 hero-h1">
+      Less manual work.<br>
+      Fewer tools.<br>
+      <em>More of the week back.</em>
+    </h1>
+    <p class="lede hero-sub">
+      Consilix is a fractional AI team for UK businesses without an internal AI lead. We audit where AI can add value across your business; train your teams to use it well and build the systems, tools and integrations that turn those opportunities into outcomes.
     </p>
-    <%= link_to "Start a Conversation", contact_path, class: "custom-accent text-white px-8 py-3 rounded-lg text-lg font-semibold hover:opacity-90 transition-opacity inline-block" %>
+    <div class="row hero-actions">
+      <%= link_to contact_path, class: "btn btn-primary" do %>
+        Book a call <span class="arrow" aria-hidden="true">→</span>
+      <% end %>
+      <%= link_to "See how we work", process_path, class: "link-text" %>
+    </div>
+  </div>
+</section>
+
+<%# ─────────────────────────── WHO THIS IS FOR ─────────────────────────── %>
+<section class="section-sm surface-alt rule-top">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="num">01</div>
+      <div class="head-body">
+        <span class="kicker">Who this is for</span>
+        <h2 class="h2">Firms where the work has outgrown the way it is done.</h2>
+      </div>
+    </div>
+
+    <div class="segments">
+      <div class="segment">
+        <span class="kicker">Owner-led boutiques</span>
+        <h3>Founders doing the quoting, proposals and client packs themselves.</h3>
+        <p>Luxury travel, events, boutique wealth, specialist recruitment. The business is bottlenecked on the founder because the workflows live in their head.</p>
+      </div>
+      <div class="segment">
+        <span class="kicker">Communications &amp; creative agencies</span>
+        <h3>PR, marketing and creative shops drowning in repetitive production work.</h3>
+        <p>Monitoring, reporting, research and new business consume account teams. Senior people spend their day doing work that more junior people used to do.</p>
+      </div>
+      <div class="segment">
+        <span class="kicker">Mid-market operations</span>
+        <h3>Property, wealth, legal and professional services running on templates and spreadsheets.</h3>
+        <p>Compliance calendars, portfolio reviews, service-charge packs, ticket triage. Real operational complexity; real budget for making it move faster and cost less.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%# ─────────────────────────── FOUR-STAGE PROGRAMME (summary) ─────────────────────────── %>
+<section class="section surface">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="num">02</div>
+      <div class="head-body">
+        <span class="kicker">The engagement</span>
+        <h2 class="h2">Four stages, scoped and priced independently.</h2>
+      </div>
+    </div>
+
+    <div class="stage">
+      <div class="stage-num">01</div>
+      <div>
+        <div class="stage-head">
+          <div>
+            <div class="stage-title">Discovery &amp; Audit</div>
+            <div class="stage-dur">Embedded on-site, scoped to team size</div>
+          </div>
+          <div class="stage-price mono">fixed fee, scoped</div>
+        </div>
+        <div class="stage-body">
+          <p>We sit with your team and map how the business actually works. The output is a complete, costed roadmap: every opportunity where AI, automation, or a better tool choice could pay back, ranked by impact, effort and ROI.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="stage">
+      <div class="stage-num">02</div>
+      <div>
+        <div class="stage-head">
+          <div>
+            <div class="stage-title">Training &amp; Enablement</div>
+            <div class="stage-dur">Role-specific, scoped from the audit</div>
+          </div>
+          <div class="stage-price mono">scoped, per team</div>
+        </div>
+        <div class="stage-body">
+          <p>Hands-on training on the AI tools that suit your stack and your people, applied to the work your team actually does. Teams that understand the tools get more value from the systems we build around them.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="stage">
+      <div class="stage-num">03</div>
+      <div>
+        <div class="stage-head">
+          <div>
+            <div class="stage-title">Build Sprints</div>
+            <div class="stage-dur">Per build, 1 to 4 weeks each</div>
+          </div>
+          <div class="stage-price mono">fixed per build</div>
+        </div>
+        <div class="stage-body">
+          <p>Automations, internal AI assistants, decision tools, integrations, custom software; whatever the audit identified. Each build is a standalone project with a fixed price, fixed timeline and a defined deliverable, tested with the people who will use it.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="stage">
+      <div class="stage-num">04</div>
+      <div>
+        <div class="stage-head">
+          <div>
+            <div class="stage-title">Embedded Partnership</div>
+            <div class="stage-dur">Ongoing, rolling, cancel anytime</div>
+          </div>
+          <div class="stage-price mono">monthly retainer</div>
+        </div>
+        <div class="stage-body">
+          <p>The retained AI capability you do not need to hire for. We maintain what is live, iterate based on real use, build new capabilities as the team finds them and keep the business ahead of what is changing in the market.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" style="margin-top: 32px;">
+      <%= link_to process_path, class: "link-text" do %>
+        Read the full programme <span class="arrow" aria-hidden="true">→</span>
+      <% end %>
+    </div>
+  </div>
+</section>
+
+<%# ─────────────────────────── MANIFESTO ─────────────────────────── %>
+<section class="section surface-ink">
+  <div class="wrap center">
+    <div class="manifesto" style="margin: 0 auto 40px; max-width: 30ch;">
+      <em>How we work.</em>
+    </div>
+    <ul class="manifesto-list" style="max-width: 640px; margin: 0 auto;">
+      <li class="manifesto" style="max-width: none;">Strategy before code.</li>
+      <li class="manifesto" style="max-width: none;">Real-world ROI over proof-of-concept polish.</li>
+      <li class="manifesto" style="max-width: none;">Systems thinking over single models.</li>
+      <li class="manifesto" style="max-width: none;">Partnership over product.</li>
+    </ul>
+  </div>
+</section>
+
+<%# ─────────────────────────── SELECTED WORK ─────────────────────────── %>
+<section class="section surface">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="num">03</div>
+      <div class="head-body">
+        <span class="kicker">Selected work</span>
+        <h2 class="h2">Real builds, in production. No demos.</h2>
+      </div>
+    </div>
+
+    <div class="case-grid">
+      <%= link_to work_path, class: "case-card" do %>
+        <span class="case-tag">Prediction markets · finance</span>
+        <div class="case-client">Private client</div>
+        <div class="case-title">An AI trading system running live across thousands of prediction markets.</div>
+        <div class="case-metric">
+          <span class="n mono">1,842</span>
+          <span class="l">tests passing,<br>137 phases shipped and counting</span>
+        </div>
+      <% end %>
+
+      <%= link_to work_path, class: "case-card" do %>
+        <span class="case-tag">Sports and talent · agency</span>
+        <div class="case-client">Private client</div>
+        <div class="case-title">An AI intelligence layer that reads the agency's inbox and surfaces partnership opportunities.</div>
+        <div class="case-metric">
+          <span class="n mono">Nightly</span>
+          <span class="l">inbox and drive ingest,<br>with a daily recommendation feed</span>
+        </div>
+      <% end %>
+
+      <%= link_to work_path, class: "case-card" do %>
+        <span class="case-tag">Luxury hospitality · boutique</span>
+        <div class="case-client">Private client</div>
+        <div class="case-title">A branded quote engine and email automation layer that unbottlenecked the founder.</div>
+        <div class="case-metric">
+          <span class="n mono">Days → hrs</span>
+          <span class="l">quote turnaround,<br>in the firm's own tone of voice</span>
+        </div>
+      <% end %>
+    </div>
+
+    <div class="row" style="margin-top: 40px;">
+      <%= link_to work_path, class: "link-text" do %>
+        See all work <span class="arrow" aria-hidden="true">→</span>
+      <% end %>
+    </div>
+  </div>
+</section>
+
+<%# ─────────────────────────── FIELD NOTES ─────────────────────────── %>
+<section class="section surface-alt rule-top">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="num">04</div>
+      <div class="head-body">
+        <span class="kicker">Field notes</span>
+        <h2 class="h2">Short writing from the client work.</h2>
+      </div>
+    </div>
+
+    <div class="notes-list">
+      <% @recent_posts.each do |post| %>
+        <%= link_to writing_post_path(slug: post[:slug]), class: "note" do %>
+          <span class="note-date"><%= post[:date_display] %></span>
+          <span>
+            <span class="note-title"><%= post[:title] %></span>
+            <div class="note-dek"><%= post[:dek] %></div>
+          </span>
+          <span class="note-arrow" aria-hidden="true">→</span>
+        <% end %>
+      <% end %>
+    </div>
+
+    <div class="row" style="margin-top: 32px;">
+      <%= link_to writing_path, class: "link-text" do %>
+        All field notes <span class="arrow" aria-hidden="true">→</span>
+      <% end %>
+    </div>
+  </div>
+</section>
+
+<%# ─────────────────────────── FOUNDER ─────────────────────────── %>
+<section class="section surface rule-top">
+  <div class="wrap">
+    <div class="founder">
+      <%= image_tag "james_headshot.jpeg", alt: "James Wood, founder of Consilix", class: "founder-photo" %>
+      <div class="founder-body">
+        <span class="kicker">The person you start with</span>
+        <h2 class="h2">James Wood.</h2>
+        <div class="prose">
+          <p>I spent five years building and scaling startups before starting Consilix. In each one, I ended up building the AI systems myself because the off-the-shelf tools stopped halfway. That pattern is the thesis of the firm.</p>
+          <p>Consilix is founder-led and for smaller projects I deliver directly. For larger ones, I assemble a specialist team from a curated network of freelance engineers, designers and consultants I have worked with before, run the engagement end to end and stay accountable for the outcome.</p>
+          <p>Every engagement starts with me. You know who is doing the thinking, who is doing the building and who is on the other end of Slack.</p>
+        </div>
+        <div class="founder-meta">
+          <a href="mailto:james@consilix.ai">james@consilix.ai</a>
+          <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+          <span class="faint">Based in London, available across the UK.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%# ─────────────────────────── CTA ─────────────────────────── %>
+<section class="section surface-ink">
+  <div class="wrap-narrow center">
+    <span class="kicker" style="justify-content: center;">Start the conversation</span>
+    <h2 class="h2" style="margin: 20px auto 16px;">
+      Thirty minutes. No pitch.
+    </h2>
+    <p class="lede" style="margin: 0 auto 36px; color: rgba(245,240,232,0.78);">
+      Bring one process that feels broken, or one question you are not sure how to answer with AI. We will walk through it and you will leave the call knowing whether it is worth doing, roughly what it would cost and whether Consilix is the right partner for it.
+    </p>
+    <%= link_to contact_path, class: "btn btn-primary", style: "background: var(--paper); color: var(--ink);" do %>
+      Book a call <span class="arrow" aria-hidden="true">→</span>
+    <% end %>
   </div>
 </section>
 
 <style>
-/* Fix mobile viewport overflow issues */
-html, body {
-  overflow-x: hidden;
-  width: 100%;
-  max-width: 100%;
-}
+  .hero-kicker { margin-bottom: 28px; }
+  .hero-h1 { max-width: 16ch; margin-bottom: 32px; }
+  .hero-sub { margin-bottom: 40px; max-width: 60ch; }
+  .hero-actions { margin-bottom: 0; }
 
-/* Pulsating circle animation */
-.pulsate-circle {
-  animation: pulsate 2s ease-in-out infinite;
-}
-
-@keyframes pulsate {
-  0% {
-    opacity: 0.4;
-    transform: scale(1);
+  @media (max-width: 540px) {
+    .hero-h1 { max-width: none; }
   }
-  50% {
-    opacity: 0.8;
-    transform: scale(1.05);
-  }
-  100% {
-    opacity: 0.4;
-    transform: scale(1);
-  }
-}
 </style>
-
-<script>
-// 3D Brain Model with GLB Loader
-document.addEventListener('DOMContentLoaded', function() {
-  setTimeout(function() {
-    const container = document.getElementById('brain-model-container');
-    const fallback = document.getElementById('brain-fallback');
-
-    if (!container || typeof THREE === 'undefined') {
-      console.log('Container or Three.js not available - showing fallback');
-      return;
-    }
-
-    if (typeof THREE.GLTFLoader === 'undefined') {
-      console.log('GLTFLoader not available - showing fallback');
-      return;
-    }
-
-    console.log('Initializing 3D brain scene...');
-
-    // Basic scene setup
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
-    const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
-
-    renderer.setSize(320, 320);
-    renderer.setClearColor(0x000000, 0);
-    container.appendChild(renderer.domElement);
-
-    // Enhanced orange lighting for glowing brain effect
-    const ambientLight = new THREE.AmbientLight(0x221100, 0.4);
-    scene.add(ambientLight);
-
-    const directionalLight = new THREE.DirectionalLight(0xff6600, 0.8);
-    directionalLight.position.set(2, 2, 2);
-    scene.add(directionalLight);
-
-    const directionalLight2 = new THREE.DirectionalLight(0xaa4400, 0.6);
-    directionalLight2.position.set(-1, -1, 1);
-    scene.add(directionalLight2);
-
-    const directionalLight3 = new THREE.DirectionalLight(0xffaa00, 0.4);
-    directionalLight3.position.set(0, -2, -1);
-    scene.add(directionalLight3);
-
-    camera.position.z = 3;
-    const defaultDistance = 3; // Current zoom as max zoom
-
-
-    // Load the brain model
-    const loader = new THREE.GLTFLoader();
-
-    loader.load('/models/mozgai.glb',
-      function(gltf) {
-        console.log('Brain model loaded successfully');
-        const brainModel = gltf.scene;
-
-        // Scale and position the brain
-        brainModel.scale.setScalar(2);
-        brainModel.position.set(0, 0, 0);
-
-        // Load and apply textures to brain with orange glowing effect
-        const textureLoader = new THREE.TextureLoader();
-
-        const colorTexture = textureLoader.load('/models/Emblemat_Świadomośc_kolor2_1.png',
-          function(texture) {
-            console.log('Color texture loaded successfully');
-          },
-          undefined,
-          function(error) {
-            console.error('Error loading color texture:', error);
-          }
-        );
-
-        const normalTexture = textureLoader.load('/models/Emblemat_Świadomośc_normalmap_2.png',
-          function(texture) {
-            console.log('Normal texture loaded successfully');
-          },
-          undefined,
-          function(error) {
-            console.error('Error loading normal texture:', error);
-          }
-        );
-
-        brainModel.traverse(function(child) {
-          if (child.isMesh) {
-            child.material = new THREE.MeshStandardMaterial({
-              map: colorTexture,
-              normalMap: normalTexture,
-              emissive: new THREE.Color(0xEB7300), // Brand orange glow
-              emissiveIntensity: 2.0, // Strong glow
-              emissiveMap: colorTexture,
-              transparent: true,
-              opacity: 0.8, // Less translucent, more solid
-              alphaTest: 0.1, // Remove very dark areas
-              side: THREE.DoubleSide, // Render both sides
-              metalness: 0.0,
-              roughness: 0.05, // Very smooth for more glow
-              depthWrite: false // Better transparency rendering
-            });
-          }
-        });
-
-        scene.add(brainModel);
-
-        // Hide fallback once model loads
-        if (fallback) fallback.style.display = 'none';
-
-        // Animation loop with rotation only
-        function animate() {
-          requestAnimationFrame(animate);
-
-          // Continue rotating brain
-          brainModel.rotation.y += 0.005;
-
-          renderer.render(scene, camera);
-        }
-
-        animate();
-        console.log('Brain model is now rotating');
-      },
-      function(progress) {
-        console.log('Loading progress: ', (progress.loaded / progress.total * 100) + '%');
-      },
-      function(error) {
-        console.error('Error loading brain model:', error);
-        console.log('Keeping fallback visible');
-      }
-    );
-
-  }, 1000);
-});
-</script>

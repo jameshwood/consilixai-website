@@ -1,129 +1,193 @@
-<!-- Hero Section -->
-<main class="custom-bg">
-  <section class="mx-auto px-8 md:px-9 pt-16 lg:pt-24" style="max-width: 1500px;">
-    <div class="text-center max-w-4xl mx-auto">
-      <h1 class="text-5xl lg:text-6xl font-bold custom-text leading-tight mb-6">
-        Contact
-      </h1>
-      <hr style="width: 64px; height: 4px; background-color: #EB7300; border: none; margin: 0 auto 32px auto;" />
-      <p class="text-xl custom-text opacity-80 leading-relaxed">
-        Let's build the right AI solution for your business
-      </p>
-    </div>
-  </section>
-</main>
+<%# ─────────────────────────────── HERO ─────────────────────────────── %>
+<section class="section surface">
+  <div class="wrap-narrow">
+    <span class="kicker">Book a call</span>
+    <h1 class="h1" style="margin: 20px 0 28px;">
+      Thirty minutes. <em>No pitch.</em>
+    </h1>
+    <p class="lede">
+      Bring one process that feels broken. We'll walk through it together. You&rsquo;ll leave the call knowing whether it&rsquo;s worth automating, roughly what it would cost and whether Consilix is the right partner for it.
+    </p>
+  </div>
+</section>
 
-<!-- Contact Section -->
-<section class="custom-bg pt-20">
-  <div class="mx-auto px-8 md:px-9" style="max-width: 1500px;">
-    <div class="grid lg:grid-cols-2" style="margin-bottom: 180px; gap: 30px;">
-      <style>
-        @media (max-width: 1023px) {
-          .contact-form { margin-right: 0 !important; }
-          .contact-right { margin-left: 0 !important; }
-          .contact-grid { gap: 24px !important; }
-          .contact-right { display: flex !important; flex-direction: column !important; gap: 24px !important; justify-content: flex-start !important; }
-        }
-      </style>
+<%# ─────────────────────────── TWO-COLUMN ─────────────────────────── %>
+<section class="section-sm surface-alt rule-top">
+  <div class="wrap">
+    <div class="contact-grid">
 
-      <!-- Contact Form -->
-      <div class="contact-form bg-gray-900 bg-opacity-20 rounded-xl p-8 border border-gray-700" style="margin-right: 10px;">
-        <h2 class="text-2xl font-bold custom-text mb-6">Get Started Today</h2>
-        
-        <% if flash[:notice] %>
-          <div class="mb-6 p-4 bg-green-600 bg-opacity-20 border border-green-500 rounded-lg">
-            <p class="text-green-400"><%= flash[:notice] %></p>
+      <div class="contact-primary">
+        <div class="sec-head" style="margin-bottom: 32px;">
+          <div class="num">01</div>
+          <div class="head-body">
+            <span class="kicker">The direct route</span>
+            <h2 class="h2" style="margin-top: 6px;">Put it straight in the diary.</h2>
           </div>
-        <% end %>
-        
-        <% if flash[:alert] %>
-          <div class="mb-6 p-4 bg-red-600 bg-opacity-20 border border-red-500 rounded-lg">
-            <p class="text-red-400"><%= flash[:alert] %></p>
-          </div>
-        <% end %>
-        <%= form_with url: contact_path, method: :post, local: true, class: "space-y-8", data: { turbo: false } do |form| %>
-          <div>
-            <%= form.text_field :name, placeholder: "Your Name", class: "w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg custom-text placeholder-gray-400 focus:border-orange-500 focus:outline-none", required: true %>
-          </div>
-          <div>
-            <%= form.email_field :email, placeholder: "Email Address", class: "w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg custom-text placeholder-gray-400 focus:border-orange-500 focus:outline-none", required: true %>
-          </div>
-          <div>
-            <%= form.text_field :company, placeholder: "Company", class: "w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg custom-text placeholder-gray-400 focus:border-orange-500 focus:outline-none" %>
-          </div>
-          <div>
-            <%= form.text_area :message, placeholder: "Tell us about your project", class: "w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg custom-text placeholder-gray-400 focus:border-orange-500 focus:outline-none", rows: 4, required: true %>
-          </div>
-          <%= form.submit "Send Message", class: "w-full custom-accent text-white px-8 py-3 rounded-lg text-lg font-semibold hover:opacity-90 transition-opacity cursor-pointer", style: "cursor: pointer;" %>
-        <% end %>
-      </div>
+        </div>
 
-      <!-- Right Column -->
-      <div class="contact-right flex flex-col justify-between h-full" style="margin-left: 10px;">
-
-        <!-- Book a Consultation -->
-        <div class="bg-gray-900 bg-opacity-20 rounded-xl p-8 border border-gray-700">
-          <h3 class="text-xl font-bold custom-text mb-4">Start a Conversation</h3>
-          <p class="custom-text opacity-80 mb-6 leading-relaxed">
-            Begin a free 30-minute strategy call to discuss your AI transformation goals.
+        <div class="panel" style="background: var(--paper); border-color: var(--rule);">
+          <div class="meta">Book on James&rsquo;s calendar</div>
+          <h3 class="h3" style="margin: 10px 0 16px;">30-minute call</h3>
+          <p class="muted" style="max-width: 48ch; margin-bottom: 24px;">
+            Direct link. No qualifying form. You pick a slot, the diary sends a Google Meet, we talk.
           </p>
-
-          <div class="flex items-center gap-4 mb-6">
-            <div class="w-12 h-12 custom-accent rounded-full flex items-center justify-center">
-              <svg width="24" height="24" fill="white" viewBox="0 0 24 24">
-                <path d="M19 3H18V1H16V3H8V1H6V3H5C3.89 3 3 3.9 3 5V19C3 20.1 3.89 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3ZM19 19H5V8H19V19ZM7 10H12V15H7V10Z"/>
-              </svg>
-            </div>
-            <div>
-              <div class="custom-text font-medium">Calendar Integration</div>
-              <div class="custom-text opacity-70 text-sm">Click to book on booking calendar</div>
-            </div>
-          </div>
-
-          <%= link_to "Open Calendar", "https://calendar.app.google/5WcBDhygYkuZqrV96", target: "_blank", class: "custom-accent text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity inline-block" %>
+          <%= link_to "Open the calendar", "https://calendar.app.google/5WcBDhygYkuZqrV96", target: "_blank", rel: "noopener", class: "btn btn-primary" %>
         </div>
 
-        <!-- Get in Touch -->
-        <div class="bg-gray-900 bg-opacity-20 rounded-xl p-8 border border-gray-700">
-          <h3 class="text-xl font-bold custom-text mb-6">Get in Touch</h3>
-
-          <div class="space-y-8">
-            <div class="flex items-center gap-4">
-              <div class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center">
-                <svg width="16" height="16" fill="currentColor" class="custom-accent-text" viewBox="0 0 24 24">
-                  <path d="M20 4H4C2.9 4 2.01 4.9 2.01 6L2 18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z"/>
-                </svg>
-              </div>
-              <div>
-
-                <div class="custom-text font-medium">hello@consilix.ai</div>
-              </div>
-            </div>
-
-            <div class="flex items-center gap-4">
-              <div class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center">
-                <svg width="16" height="16" fill="currentColor" class="custom-accent-text" viewBox="0 0 24 24">
-                  <path d="M6.62 10.79C8.06 13.62 10.38 15.94 13.21 17.38L15.41 15.18C15.69 14.9 16.08 14.82 16.43 14.93C17.55 15.3 18.75 15.5 20 15.5C20.55 15.5 21 15.95 21 16.5V20C21 20.55 20.55 21 20 21C10.61 21 3 13.39 3 4C3 3.45 3.45 3 4 3H7.5C8.05 3 8.5 3.45 8.5 4C8.5 5.25 8.7 6.45 9.07 7.57C9.18 7.92 9.1 8.31 8.82 8.59L6.62 10.79Z"/>
-                </svg>
-              </div>
-              <div>
-                <div class="custom-text font-medium">+44 7912 884 349</div>
-              </div>
-            </div>
-
-            <div class="flex items-center gap-4">
-              <div class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center">
-                <svg width="16" height="16" fill="currentColor" class="custom-accent-text" viewBox="0 0 24 24">
-                  <path d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2ZM17 13H11V7H12.5V11.5H17V13Z"/>
-                </svg>
-              </div>
-              <div>
-                <div class="custom-text font-medium">Within 24 hours</div>
-              </div>
-            </div>
+        <div class="contact-info">
+          <div class="contact-row">
+            <span class="meta">Email</span>
+            <a class="link-text" href="mailto:hello@consilix.ai">hello@consilix.ai</a>
+          </div>
+          <div class="contact-row">
+            <span class="meta">Phone</span>
+            <a class="link-text" href="tel:+447912884349">+44 7912 884 349</a>
+          </div>
+          <div class="contact-row">
+            <span class="meta">Response</span>
+            <span>Within one working day. Usually faster.</span>
+          </div>
+          <div class="contact-row">
+            <span class="meta">Based</span>
+            <span>London, UK &mdash; available across the UK.</span>
           </div>
         </div>
       </div>
+
+      <div class="contact-secondary">
+        <div class="sec-head" style="margin-bottom: 32px;">
+          <div class="num">02</div>
+          <div class="head-body">
+            <span class="kicker">Prefer to write first</span>
+            <h2 class="h2" style="margin-top: 6px;">Tell me about the problem.</h2>
+          </div>
+        </div>
+
+        <%= form_with url: contact_path, method: :post, local: true, data: { turbo: false } do |form| %>
+          <div class="form-field">
+            <%= form.label :name, "Your name" %>
+            <%= form.text_field :name, required: true, autocomplete: "name" %>
+          </div>
+          <div class="form-field">
+            <%= form.label :email, "Email" %>
+            <%= form.email_field :email, required: true, autocomplete: "email" %>
+          </div>
+          <div class="form-field">
+            <%= form.label :company, "Company" %>
+            <%= form.text_field :company, autocomplete: "organization" %>
+          </div>
+          <div class="form-field">
+            <%= form.label :message, "What's the problem you'd bring to a 30-minute call?" %>
+            <%= form.text_area :message, required: true, rows: 5 %>
+          </div>
+          <%= form.submit "Send", class: "btn btn-primary" %>
+        <% end %>
+
+        <p class="faint" style="font-size: 13px; margin-top: 20px; max-width: 52ch;">
+          Your details come straight to my inbox. No CRM funnel, no drip sequence. If the call isn&rsquo;t the right fit, I&rsquo;ll tell you in the reply and &mdash; where I can &mdash; point you at someone better.
+        </p>
+      </div>
+
     </div>
   </div>
 </section>
+
+<%# ─────────────────────────── EXPECT ─────────────────────────── %>
+<section class="section surface rule-top">
+  <div class="wrap-narrow">
+    <div class="sec-head">
+      <div class="num">03</div>
+      <div class="head-body">
+        <span class="kicker">What to expect on the call</span>
+        <h2 class="h2">Three questions, roughly in this order.</h2>
+      </div>
+    </div>
+    <ul class="expect-list">
+      <li>
+        <span class="expect-n mono">01</span>
+        <div>
+          <strong>What is the process that broke and for whom?</strong>
+          <p>Who runs it today, how often, how long does it take and where does it hurt the most?</p>
+        </div>
+      </li>
+      <li>
+        <span class="expect-n mono">02</span>
+        <div>
+          <strong>What have you already tried?</strong>
+          <p>Tools you&rsquo;ve bought, contractors you&rsquo;ve hired, spreadsheets you&rsquo;ve rebuilt. What worked partially and what didn&rsquo;t stick.</p>
+        </div>
+      </li>
+      <li>
+        <span class="expect-n mono">03</span>
+        <div>
+          <strong>What does &ldquo;worth it&rdquo; look like?</strong>
+          <p>Hours back per week? Faster client-turnaround? A specific person unblocked? Without this, the automation optimises for the wrong thing.</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<style>
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(32px, 4vw, 64px);
+    align-items: start;
+  }
+  .contact-info {
+    margin-top: 32px;
+    padding-top: 20px;
+    border-top: 1px solid var(--rule);
+    display: grid;
+    gap: 16px;
+  }
+  .contact-row {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 16px;
+    align-items: baseline;
+    padding: 6px 0;
+    border-bottom: 1px dashed var(--rule);
+    font-size: 15px;
+    color: var(--ink-2);
+  }
+  .contact-row:last-child { border-bottom: 0; }
+
+  .expect-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0;
+  }
+  .expect-list li {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: 24px;
+    align-items: start;
+    padding: 24px 0;
+    border-top: 1px solid var(--rule);
+  }
+  .expect-list li:last-child { border-bottom: 1px solid var(--rule); }
+  .expect-n {
+    font-size: 14px;
+    color: var(--accent);
+    letter-spacing: 0.05em;
+  }
+  .expect-list strong {
+    font-family: var(--f-display);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 1.25;
+    color: var(--ink);
+    letter-spacing: -0.005em;
+  }
+  .expect-list p { margin-top: 6px; color: var(--ink-mute); font-size: 15px; line-height: 1.6; }
+
+  @media (max-width: 880px) {
+    .contact-grid { grid-template-columns: 1fr; }
+    .contact-row { grid-template-columns: 100px 1fr; }
+  }
+</style>

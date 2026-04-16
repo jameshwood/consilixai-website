@@ -1,116 +1,250 @@
-<!-- Hero Section -->
-<main class="custom-bg">
-  <section class="mx-auto px-8 md:px-9 pt-16 lg:pt-24" style="max-width: 1500px;">
-    <div class="text-center max-w-4xl mx-auto">
-      <h1 class="text-5xl lg:text-6xl font-bold custom-text leading-tight mb-6">
-        About Consilix.ai
-      </h1>
-      <hr style="width: 64px; height: 4px; background-color: #EB7300; border: none; margin: 0 auto 32px auto;" />
-      <p class="text-xl custom-text opacity-80 leading-relaxed">
-       AI strategists and builders helping companies move from intent to intelligent execution.
-      </p>
-    </div>
-  </section>
-</main>
-
-<!-- Mission and Philosophy Section -->
-<section class="custom-bg pt-20">
-  <div class="mx-auto px-8 md:px-9" style="max-width: 1500px;">
-    <div class="grid md:grid-cols-2 gap-8 md:gap-12" style="margin-bottom: 180px;">
-
-      <!-- Why We Exist Box -->
-      <div class="p-6 md:p-8">
-        <h2 class="text-2xl font-bold custom-text mb-2">Why We Exist</h2>
-        <div class="w-16 h-0.5 custom-accent mb-6"></div>
-        <p class="custom-text opacity-80 leading-relaxed text-lg">
-          Most AI implementations fail not because of technology limitations, but because they are built without understanding the operational reality of enterprise environments. We bridge that gap by combining strategic thinking with hands-on execution, ensuring every system we build creates measurable business impact.
-        </p>
-      </div>
-
-      <!-- How We Work Box -->
-      <div class="p-6 md:p-8">
-        <h2 class="text-2xl font-bold custom-text mb-2">How We Work</h2>
-        <div class="w-16 h-0.5 custom-accent mb-6"></div>
-        <div class="space-y-3">
-          <div class="flex items-start" style="gap: 12px;">
-            <span class="custom-accent-text text-lg mt-1">•</span>
-            <p class="custom-text opacity-80 text-lg leading-relaxed">Strategy before code</p>
-          </div>
-          <div class="flex items-start" style="gap: 12px;">
-            <span class="custom-accent-text text-lg mt-1">•</span>
-            <p class="custom-text opacity-80 text-lg leading-relaxed">Real-world ROI over proof-of-concept polish</p>
-          </div>
-          <div class="flex items-start" style="gap: 12px;">
-            <span class="custom-accent-text text-lg mt-1">•</span>
-            <p class="custom-text opacity-80 text-lg leading-relaxed">Systems thinking over single models</p>
-          </div>
-          <div class="flex items-start" style="gap: 12px;">
-            <span class="custom-accent-text text-lg mt-1">•</span>
-            <p class="custom-text opacity-80 text-lg leading-relaxed">Partnership over product</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-
-
-<!-- Leadership Team Section -->
-<section class="custom-bg pt-20">
-  <div class="mx-auto px-8 md:px-9" style="max-width: 1500px;">
-    <div class="max-w-6xl mx-auto">
-      <div class="text-center" style="margin-bottom: 80px;">
-        <h2 class="text-3xl font-bold custom-text mb-6">Leadership Team</h2>
-        <hr style="width: 64px; height: 4px; background-color: #EB7300; border: none; margin: 0 auto;" />
-      </div>
-
-      <div class="grid lg:grid-cols-2 items-center gap-8 lg:gap-20" style="margin-bottom: 180px;">
-        <div class="flex justify-center order-2 lg:order-1">
-          <%= image_tag "james_headshot.jpeg", alt: "James Wood - Founder & CEO", class: "w-64 h-64 lg:w-80 lg:h-80 rounded-xl object-cover shadow-lg" %>
-        </div>
-
-        <div class="space-y-6 order-1 lg:order-2">
-          <div>
-            <h3 class="text-3xl font-bold custom-text mb-2">James Wood</h3>
-            <p class="custom-accent-text font-medium text-xl mb-6">Founder & CEO</p>
-          </div>
-
-          <p class="custom-text opacity-80 text-lg leading-relaxed" style="margin-bottom: 32px;">
-            With over five years immersed in the fast-paced world of startups, James Wood developed a rare, firsthand understanding of how to build and scale businesses from the ground up. During this time, he did not just witness the power of AI, he engineered it. By crafting bespoke AI solutions to streamline operations and enhance efficiency within his own ventures, James gained deep, practical insight into how intelligent systems can unlock competitive advantages. Rather than treat AI as a distant technical domain, James saw its potential as a strategic lever. This vision led him to formally strengthen his technical foundation with a rigorous software development program, further equipping him to speak fluently across both technical and commercial disciplines.
-          </p>
-
-          <p class="custom-text opacity-80 text-lg leading-relaxed">
-             It is this unique dual fluency, merging business acumen with hands-on AI capability, that positioned James at a natural inflection point: the creation of Consilix, a consultancy dedicated to helping businesses harness AI not just for automation, but for real strategic transformation. Where many see a gap between commercial needs and AI implementation, James sees a bridge, one he has spent years building.
-        </p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- CTA Section -->
-<section class="custom-bg pt-20" style="margin-bottom: 180px;">
-  <div class="max-w-4xl mx-auto px-8 md:px-9 text-center">
-    <h2 class="text-3xl font-bold custom-text mb-6">Let's Build What's Next</h2>
-    <hr style="width: 64px; height: 4px; background-color: #EB7300; border: none; margin: 0 auto 32px auto;" />
-    <p class="text-lg custom-text opacity-80 mb-8 max-w-2xl mx-auto">
-      Ready to transform your operations with intelligent automation? We're here to help you navigate from strategy to successful implementation.
+<%# ─────────────────────────────── HERO ─────────────────────────────── %>
+<section class="section surface">
+  <div class="wrap-narrow">
+    <span class="kicker">About</span>
+    <h1 class="h1" style="margin: 20px 0 28px;">
+      A small firm with a <em>long bench.</em>
+    </h1>
+    <p class="lede">
+      Consilix is founder-led. Small projects are delivered directly; larger ones are delivered by a specialist team assembled from a curated network of freelance engineers, designers and consultants. The sales call, the strategy and the accountability stay with the founder. The rest scales with the scope of the engagement.
     </p>
-    <%= link_to "Start a Conversation", contact_path, class: "custom-accent text-white px-8 py-3 rounded-lg text-lg font-semibold hover:opacity-90 transition-opacity inline-block" %>
+  </div>
+</section>
+
+<%# ─────────────────────────── FOUNDER ─────────────────────────── %>
+<section class="section surface-alt rule-top">
+  <div class="wrap">
+    <div class="founder">
+      <%= image_tag "james_headshot.jpeg", alt: "James Wood, founder of Consilix", class: "founder-photo" %>
+      <div class="founder-body">
+        <span class="kicker">Founder</span>
+        <h2 class="h2" style="margin: 16px 0 22px;">James Wood.</h2>
+        <div class="prose">
+          <p>I spent five years inside early-stage startups before starting Consilix. In each one I ended up building the AI systems myself, not because anyone asked me to but because the off-the-shelf tools stopped halfway and someone had to finish the job. That pattern is the thesis of this firm.</p>
+          <p>I formally grounded the technical side by completing a software development programme after the commercial years, which means I sit at an unusual intersection: I can hold a full P&amp;L conversation with a managing partner, then go and write the code for the thing we just agreed to build. Most AI vendors can do one of those things; very few can do both without a handoff.</p>
+          <p>Over those years I have built a trusted network of freelance specialists: senior engineers, data people, designers and domain consultants. For small engagements, I deliver directly. For larger ones, I assemble the right team, run the engagement and remain the single point of accountability from first call to handover.</p>
+        </div>
+        <div class="founder-meta">
+          <a href="mailto:james@consilix.ai">james@consilix.ai</a>
+          <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+          <span class="faint">Based in London, available across the UK.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%# ─────────────────────────── PHILOSOPHY (expanded) ─────────────────────────── %>
+<section class="section surface-ink rule-top">
+  <div class="wrap">
+    <div class="sec-head" style="border-bottom-color: rgba(245,240,232,0.14);">
+      <div class="num" style="color: var(--paper);">01</div>
+      <div class="head-body">
+        <span class="kicker" style="color: var(--paper);">Philosophy</span>
+        <h2 class="h2" style="color: var(--paper);">Four lines we actually operate by.</h2>
+      </div>
+    </div>
+
+    <div class="philosophy-grid">
+      <article>
+        <div class="philosophy-line">Strategy before code.</div>
+        <p>A workflow that should not exist cannot be fixed by automating it faster. The first question is whether the work needs doing at all; whether a process redesign would halve it and only then whether a piece of software should take over. A lot of the best consulting hours are spent deleting things, not building them.</p>
+      </article>
+      <article>
+        <div class="philosophy-line">Real-world ROI over proof-of-concept polish.</div>
+        <p>A prototype that demos brilliantly and nobody uses is worth nothing. A rougher build that actually removes two hours from a Tuesday afternoon is worth a great deal. The bar for "done" is not whether it looks clever in a screenshare; it is whether the team doing the work prefers it to what they were doing before.</p>
+      </article>
+      <article>
+        <div class="philosophy-line">Systems thinking over single models.</div>
+        <p>The interesting problems are not solved by a better prompt or a bigger model. They are solved by connecting existing tools, existing data and existing people in ways that compound. Most Consilix builds are less about AI in isolation and more about plumbing, with the AI picking up the parts that plumbing cannot.</p>
+      </article>
+      <article>
+        <div class="philosophy-line">Partnership over product.</div>
+        <p>Consilix is deliberately not a SaaS company. There is no platform to renew. There is no seat-based pricing pushing us to find users who do not need the thing. Every client relationship is an engagement that can be ended at a month's notice and the builds are yours the moment they ship.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<%# ─────────────────────────── COMMERCIAL MODEL ─────────────────────────── %>
+<section class="section surface">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="num">02</div>
+      <div class="head-body">
+        <span class="kicker">How we deliver</span>
+        <h2 class="h2">What working with Consilix actually feels like, in practice.</h2>
+      </div>
+    </div>
+
+    <div class="model-grid">
+      <div class="model-card">
+        <div class="meta">Day one</div>
+        <h3 class="h3" style="margin: 10px 0 10px;">Audit, not onboarding.</h3>
+        <p class="muted">No month-long ramp. The first on-site day is already observing real work. You see value from Stage 01 before you sign anything larger.</p>
+      </div>
+      <div class="model-card">
+        <div class="meta">Team</div>
+        <h3 class="h3" style="margin: 10px 0 10px;">Founder-led, specialist-backed.</h3>
+        <p class="muted">Small projects are delivered directly. Larger ones are delivered by a team assembled from a curated network of freelance engineers, designers and domain specialists, briefed and run by James end to end.</p>
+      </div>
+      <div class="model-card">
+        <div class="meta">Pricing</div>
+        <h3 class="h3" style="margin: 10px 0 10px;">Fixed fees, scoped per engagement.</h3>
+        <p class="muted">The audit is a fixed fee scoped to your team size. Every build is a fixed fee, scoped from the audit, with a one-page SOW. The monthly retainer is rolling. No day-rate creep, no change-order gamesmanship.</p>
+      </div>
+      <div class="model-card">
+        <div class="meta">IP</div>
+        <h3 class="h3" style="margin: 10px 0 10px;">The builds are yours.</h3>
+        <p class="muted">Every build Consilix ships belongs to the client, including the prompts, the code and the documentation. You can replace us with someone cheaper the day after handover. That constraint keeps us honest about making builds maintainable.</p>
+      </div>
+      <div class="model-card">
+        <div class="meta">Location</div>
+        <h3 class="h3" style="margin: 10px 0 10px;">On-site where it matters.</h3>
+        <p class="muted">The audit runs on-site because watching the work is how you learn what the work is. Build sprints are mostly remote. The monthly retainer is flexible: whatever cadence the engagement needs.</p>
+      </div>
+      <div class="model-card">
+        <div class="meta">Data</div>
+        <h3 class="h3" style="margin: 10px 0 10px;">Your tools, your tenancy.</h3>
+        <p class="muted">We default to tools you already hold data-processing agreements with. Custom infrastructure goes in a UK region with a signed DPA. No fishing expeditions through client data.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%# ─────────────────────────── DISQUALIFIER ─────────────────────────── %>
+<section class="section surface-alt rule-top">
+  <div class="wrap-narrow">
+    <div class="sec-head">
+      <div class="num">03</div>
+      <div class="head-body">
+        <span class="kicker">Who we do not work with</span>
+        <h2 class="h2">The engagements we turn down.</h2>
+      </div>
+    </div>
+
+    <div class="prose">
+      <p>Consilix is small enough that every engagement needs to be the right shape. A handful of categories are rarely a good fit.</p>
+    </div>
+
+    <ul class="no-list">
+      <li>
+        <strong>Firms where AI is the product itself.</strong>
+        <span>If you are building an AI platform for resale, you need an ML team and an infrastructure shop, not a fractional AI consultancy. There are better firms for this and we can recommend them.</span>
+      </li>
+      <li>
+        <strong>Anyone looking for the cheapest quote.</strong>
+        <span>Pricing is fixed and transparent. It is not the lowest number in the market. If price is the primary filter, the right partner is an offshore dev shop or a no-code template, not Consilix.</span>
+      </li>
+      <li>
+        <strong>Projects without a real sponsor.</strong>
+        <span>If the senior sponsor does not have authority to sign off on changes that cross departments, the audit will surface things the organisation cannot act on. Better to wait until that sponsor exists.</span>
+      </li>
+      <li>
+        <strong>Engagements where nothing is allowed to ship.</strong>
+        <span>We are happy to produce a strategy, a deck, or a board paper where the engagement needs one; what we will not do is take on work where the deliverable is a document and the building is explicitly off the table. The audit exists to drive action, not to sit on a shelf.</span>
+      </li>
+      <li>
+        <strong>"Can you just…" requests without a workflow behind them.</strong>
+        <span>Builds attached to a specific workflow pay for themselves. Builds attached to an executive's passing curiosity usually do not. The audit is the filter.</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<%# ─────────────────────────── CTA ─────────────────────────── %>
+<section class="section surface-ink rule-top">
+  <div class="wrap-narrow center">
+    <span class="kicker" style="color: var(--paper); justify-content: center;">Start the conversation</span>
+    <h2 class="h2" style="margin: 18px auto 16px; color: var(--paper);">
+      Thirty minutes. No deck. Bring one question.
+    </h2>
+    <p class="lede" style="margin: 0 auto 36px; color: rgba(245,240,232,0.78);">
+      Book a call and we will walk through it with you. You leave knowing whether it is worth doing, what it would cost and whether Consilix is the right partner for it.
+    </p>
+    <%= link_to contact_path, class: "btn btn-primary", style: "background: var(--paper); color: var(--ink);" do %>
+      Book a call <span class="arrow" aria-hidden="true">→</span>
+    <% end %>
   </div>
 </section>
 
 <style>
-.leader-card {
-  transition: all 0.3s ease;
-  border: 1px solid rgba(255, 236, 209, 0.1);
-}
+  .philosophy-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(28px, 3vw, 56px);
+    color: rgba(245, 240, 232, 0.82);
+  }
+  .philosophy-grid article {
+    padding-top: 28px;
+    border-top: 1px solid rgba(245, 240, 232, 0.14);
+  }
+  .philosophy-line {
+    font-family: var(--f-display);
+    font-style: normal;
+    font-size: clamp(22px, 2.2vw, 30px);
+    line-height: 1.2;
+    color: var(--paper);
+    letter-spacing: -0.005em;
+    margin-bottom: 14px;
+  }
+  .philosophy-grid p {
+    font-size: 15px;
+    line-height: 1.65;
+    color: rgba(245, 240, 232, 0.76);
+    max-width: 44ch;
+    margin: 0;
+  }
 
-.leader-card:hover {
-  border-color: #EB7300;
-  box-shadow: 0 8px 20px rgba(235, 115, 0, 0.15);
-}
+  .model-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+  }
+  .model-card {
+    padding: 32px clamp(18px, 2vw, 28px) 36px;
+    border-top: 1px solid var(--rule);
+    border-right: 1px solid var(--rule);
+  }
+  .model-card:nth-child(3n) { border-right: 0; }
+  .model-card .muted { font-size: 15px; line-height: 1.6; max-width: 36ch; }
+
+  .no-list {
+    list-style: none;
+    padding: 0;
+    margin: 32px 0 0;
+    display: grid;
+    gap: 0;
+  }
+  .no-list li {
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    gap: clamp(20px, 3vw, 48px);
+    align-items: baseline;
+    padding: 22px 0;
+    border-top: 1px solid var(--rule);
+  }
+  .no-list li:last-child { border-bottom: 1px solid var(--rule); }
+  .no-list strong {
+    font-family: var(--f-display);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 1.25;
+    color: var(--ink);
+    letter-spacing: -0.005em;
+  }
+  .no-list span {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--ink-2);
+    max-width: 56ch;
+  }
+
+  @media (max-width: 880px) {
+    .philosophy-grid { grid-template-columns: 1fr; }
+    .model-grid { grid-template-columns: 1fr; }
+    .model-card { border-right: 0; }
+    .no-list li { grid-template-columns: 1fr; gap: 8px; }
+  }
 </style>
