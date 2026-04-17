@@ -187,4 +187,10 @@
     a.related-item { grid-template-columns: 1fr; }
     .related-arrow { display: none; }
   }
+  @media (max-width: 540px) {
+    .article-title { font-size: clamp(30px, 8vw, 44px); max-width: none; }
+    .article-body p { font-size: 17px; line-height: 1.7; }
+    .article-body p:first-child::first-letter { font-size: 2.8em; margin-right: 8px; }
+    .article-foot { margin-top: 40px; }
+  }
 </style>

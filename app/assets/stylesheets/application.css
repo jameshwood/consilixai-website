@@ -732,13 +732,29 @@ em { font-style: normal; color: var(--accent); font-weight: 500; }
   .sec-head { grid-template-columns: auto 1fr; }
   .note { grid-template-columns: 1fr auto; }
   .note-date { grid-column: 1 / -1; }
+  .segments { grid-template-columns: 1fr; }
+  .case-grid { grid-template-columns: 1fr; }
+  .case-card { min-height: auto; }
+  .manifesto { font-size: clamp(22px, 5vw, 32px); }
 }
 
 @media (max-width: 540px) {
   body { font-size: 16px; }
   .section { padding: 64px 0; }
+  .section-sm { padding: 48px 0; }
   .sec-head .num { font-size: 40px; }
   .wrap, .wrap-narrow { padding: 0 20px; }
+  .h1 { font-size: clamp(34px, 9vw, 48px); }
+  .lede { font-size: 17px; }
+  .case-card { padding: 20px; }
+  .segments { gap: 32px; }
+  .manifesto-list { gap: 14px; }
+  .faq-item { padding: 20px 0; }
+  .faq-q { font-size: 19px; }
+  .pull-quote { font-size: clamp(22px, 6vw, 30px); }
+  .btn { padding: 14px 20px; font-size: 15px; width: 100%; justify-content: center; }
+  .link-text { font-size: 15px; }
+  .founder-meta { gap: 16px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
