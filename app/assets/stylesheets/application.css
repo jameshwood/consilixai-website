@@ -179,6 +179,8 @@ em { font-style: normal; color: var(--accent); font-weight: 500; }
 .section    { padding: clamp(64px, 10vw, 128px) 0; }
 .section-sm { padding: clamp(48px, 7vw, 88px) 0; }
 .section + .section { padding-top: 0; }
+.section.surface-ink + .section:not(.surface-ink) { padding-top: clamp(64px, 10vw, 128px); }
+.section:not(.surface-ink) + .section.surface-ink { padding-top: clamp(64px, 10vw, 128px); }
 
 .rule-top    { border-top: 1px solid var(--rule); }
 .rule-bottom { border-bottom: 1px solid var(--rule); }
