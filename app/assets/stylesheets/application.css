@@ -5,9 +5,9 @@
 
 /* ───────────────────────── DESIGN TOKENS (D2 · Quiet Modernist) ───────────────────────── */
 :root {
-  --paper:        #F5F0E8;           /* warm cream */
-  --paper-2:      #EFE8DB;           /* card/panel */
-  --paper-3:      #E6DDCB;           /* deeper cream (hover, pills) */
+  --paper:        #F1ECE3;           /* oat — cooler than cream, distinct from Anthropic */
+  --paper-2:      #EBE6DC;           /* card/panel */
+  --paper-3:      #E1DBCD;           /* deeper oat (hover, pills) */
   --ink:          #131314;           /* near-black */
   --ink-2:        #2C2C2E;
   --ink-mute:     #5A5A5E;
