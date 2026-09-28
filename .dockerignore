@@ -1,0 +1,14 @@
+.git
+.github
+log/*
+tmp/*
+storage/*
+node_modules
+design-research
+*.log
+.env
+.env.*
+!.env.sample
+env.sample
+public/assets
+public/packs
