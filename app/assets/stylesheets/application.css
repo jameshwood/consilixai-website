@@ -3,22 +3,23 @@
  *= require_self
  */
 
-/* ───────────────────────── DESIGN TOKENS (D2 · Quiet Modernist) ───────────────────────── */
+/* ───────────────────────── DESIGN TOKENS (D2 · Quiet Modernist · stone + petrel, Sep 2026) ───────────────────────── */
 :root {
-  --paper:        #F1ECE3;           /* oat — cooler than cream, distinct from Anthropic */
-  --paper-2:      #EBE6DC;           /* card/panel */
-  --paper-3:      #E1DBCD;           /* deeper oat (hover, pills) */
-  --ink:          #131314;           /* near-black */
-  --ink-2:        #2C2C2E;
-  --ink-mute:     #5A5A5E;
-  --ink-faint:    #8A8A8E;
-  --accent:       #963F21;           /* burnt sienna — sampled from the logo mark dot */
-  --accent-deep:  #6F2C17;
-  --accent-faint: rgba(150, 63, 33, 0.08);
-  --ink-green:    #0B3A2E;           /* deep forest, used very sparingly */
-  --rule:         rgba(19, 19, 20, 0.10);
-  --rule-soft:    rgba(19, 19, 20, 0.05);
-  --shadow-card:  0 1px 2px rgba(19,19,20,.04), 0 8px 24px rgba(19,19,20,.04);
+  --paper:        #F0F1ED;           /* stone — cool grey-green, no cream */
+  --paper-2:      #E7E9E3;           /* card/panel */
+  --paper-3:      #DCDFD7;           /* deeper stone (hover, pills) */
+  --ink:          #14181A;           /* cool near-black */
+  --ink-2:        #2B3033;
+  --ink-mute:     #5B6367;
+  --ink-faint:    #8A9296;
+  --accent:       #0E5C63;           /* petrol — the logo dot */
+  --accent-deep:  #093F45;
+  --accent-bright:#2F8F98;           /* accent for use on ink surfaces */
+  --accent-faint: rgba(14, 92, 99, 0.08);
+  --ink-green:    #0B3A2E;           /* legacy, unused */
+  --rule:         rgba(20, 24, 26, 0.10);
+  --rule-soft:    rgba(20, 24, 26, 0.05);
+  --shadow-card:  0 1px 2px rgba(20,24,26,.04), 0 8px 24px rgba(20,24,26,.04);
 
   --measure:      66ch;              /* reading measure cap */
   --wrap:         1200px;            /* site max width */
@@ -229,12 +230,12 @@ em { font-style: normal; color: var(--accent); font-weight: 500; }
 .surface-ink .note-title-lg,
 .surface-ink .faq-q,
 .surface-ink .philosophy-line { color: var(--paper); }
-.surface-ink .prose p { color: rgba(245, 240, 232, 0.82); }
+.surface-ink .prose p { color: rgba(240, 241, 237, 0.82); }
 .surface-ink .prose strong { color: var(--paper); }
-.surface-ink .lede { color: rgba(245, 240, 232, 0.78); }
-.surface-ink .meta { color: rgba(245, 240, 232, 0.6); }
-.surface-ink .faint { color: rgba(245, 240, 232, 0.5); }
-.surface-ink em { color: var(--accent); }
+.surface-ink .lede { color: rgba(240, 241, 237, 0.78); }
+.surface-ink .meta { color: rgba(240, 241, 237, 0.6); }
+.surface-ink .faint { color: rgba(240, 241, 237, 0.5); }
+.surface-ink em { color: var(--accent-bright); }
 .surface-ink hr,
 .surface-ink .rule-top,
 .surface-ink .rule-bottom,
@@ -245,16 +246,16 @@ em { font-style: normal; color: var(--accent); font-weight: 500; }
 .surface-ink .stage-delivers,
 .surface-ink .case-metric,
 .surface-ink .callout,
-.surface-ink .panel { border-color: rgba(245, 240, 232, 0.14); }
-.surface-ink .panel { background: rgba(245, 240, 232, 0.04); }
-.surface-ink .stage-delivers li::before { background: var(--accent); }
+.surface-ink .panel { border-color: rgba(240, 241, 237, 0.14); }
+.surface-ink .panel { background: rgba(240, 241, 237, 0.04); }
+.surface-ink .stage-delivers li::before { background: var(--accent-bright); }
 .surface-ink .callout p { color: var(--paper); }
-.surface-ink .form-field label { color: rgba(245, 240, 232, 0.72); }
+.surface-ink .form-field label { color: rgba(240, 241, 237, 0.72); }
 .surface-ink .form-field input,
-.surface-ink .form-field textarea { color: var(--paper); border-bottom-color: rgba(245,240,232,0.20); }
+.surface-ink .form-field textarea { color: var(--paper); border-bottom-color: rgba(240, 241, 237,0.20); }
 .surface-ink .form-field input:focus,
 .surface-ink .form-field textarea:focus { border-bottom-color: var(--paper); }
-.surface-ink .sector-chip { color: rgba(245,240,232,0.82); border-color: rgba(245,240,232,0.18); background: transparent; }
+.surface-ink .sector-chip { color: rgba(240, 241, 237,0.82); border-color: rgba(240, 241, 237,0.18); background: transparent; }
 
 .panel {
   background: var(--paper-2);
